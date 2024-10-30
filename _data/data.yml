@@ -298,7 +298,7 @@ sidebar:
 #    bitbucket:
 #    twitter: 
 #    stack-overflow: # Number/Username, e.g. 123456/alandoe
-    bootdotdev: https://www.boot.dev/u/slick_g
+    bootdotdev: slick_g
 #    goodreads: # Number-Username, e.g. 123456-alandoe
     pdf: https://raw.githubusercontent.com/Ghvinerias/online-cv/master/assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
 
@@ -422,7 +422,7 @@ projects:
 
      - title: HomeLAB
        link: "https://github.com/Ghvinerias/learning-golang"
-       tagline: "A project that almost every self-respecting tech enthusiast has, this project is never completed, it is always in a constant state of changes."
+       tagline: "A project that almost every self-respecting tech enthusiast has, this project is never completed, it is always in a constant state of flux."
 #
 #      - title: Tempo
 #        link: "#"
