@@ -157,6 +157,14 @@ p {
       }
     }
   }
+  .level-bar {
+    height: 10px;
+    background: $smoky-white;
+  }
+  .level-bar-inner {
+    height: 10px;
+    background: lighten($theme-color, 15%);
+  }
 }
 
 .main-wrapper {
@@ -277,6 +285,40 @@ p {
   .level-bar-inner {
     height: 12px;
     background: lighten($theme-color, 15%);
+  }
+}
+
+// margin-bottom: 0;
+// li {
+//   margin-bottom: 10px;
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+.skillset-list {
+  margin: 5px;
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .level-title {
+    font-size: 14px;
+    margin-right: 10px; /* Space between name and bar */
+    flex: 0 0 auto; /* Prevents the title from stretching */
+  }
+  .level-bar {
+    height: 12px;
+    background: $smoky-white;
+    //max-width: 10px; /* Set the maximum width for the bar */
+    flex: 1; /* Makes the bar flexible to fill remaining space */
+    margin-right: 5px;
+  }
+  .level-bar-inner {
+    height: 12px;
+    background: lighten($theme-color, 20%);
+    max-width: 100%; /* Ensure the inner bar respects the max-width of .level-bar */
+    margin-right: 5px;
   }
 }
 

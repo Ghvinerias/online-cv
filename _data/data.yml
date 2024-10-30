@@ -325,6 +325,30 @@ sidebar:
 
         - item: HomeLAB
           link:
+    skills:
+        title: Skills &amp; Proficiency
+
+        toolset:
+          - name: Linux
+            level: 70%
+
+          - name: Windows
+            level: 70%
+
+          - name: Terraform
+            level: 50%
+
+          - name: Jenkins
+            level: 80%
+
+          - name: Ansible
+            level: 50%
+
+          - name: Proxmox
+            level: 70%
+
+          - name: ESXi
+            level: 60%
 
 career-profile:
     title: Career Profile
@@ -477,30 +501,30 @@ projects:
 #        authors: Edgar T. Irons
 #        conference: "Comm. ACM 4 (1961), 51–55"
 
-skills:
-    title: Skills &amp; Proficiency
+# skills:
+#     title: Skills &amp; Proficiency
 
-    toolset:
-      - name: Linux
-        level: 70%
+#     toolset:
+#       - name: Linux
+#         level: 70%
 
-      - name: Windows
-        level: 70%
+#       - name: Windows
+#         level: 70%
 
-      - name: Terraform
-        level: 50%
+#       - name: Terraform
+#         level: 50%
 
-      - name: Jenkins
-        level: 80%
+#       - name: Jenkins
+#         level: 80%
 
-      - name: Ansible
-        level: 50%
+#       - name: Ansible
+#         level: 50%
 
-      - name: Proxmox
-        level: 70%
+#       - name: Proxmox
+#         level: 70%
 
-      - name: ESXi
-        level: 60%
+#       - name: ESXi
+#         level: 60%
 
 footer: >
     Thank you for your time :) 
