@@ -14,13 +14,14 @@ jobs:
       - name: Download PDF
         env:
           PDF_API_KEY: ${{ secrets.PDF_API_KEY }}
-        run: wget -O Aleksandre-Ghvinera-CV-EN.pdf "http://api.pdflayer.com/api/convert?access_key=${PDF_API_KEY}&document_url=https://ghvinerias.github.io/online-cv/print"
+        # run: rm -rf assets/pdf/
+        run: wget -O Aleksandre-Ghvineria-CV-EN.pdf "http://api.pdflayer.com/api/convert?access_key=${PDF_API_KEY}&document_url=https://ghvinerias.github.io/online-cv/print"
 
       - name: Create assets directory
         run: mkdir -p assets/pdf
 
       - name: Move PDF to assets directory
-        run: mv Aleksandre-Ghvinera-CV-EN.pdf assets/pdf/
+        run: mv Aleksandre-Ghvineria-CV-EN.pdf assets/pdf/
 
       - name: Commit and push changes
         run: |
