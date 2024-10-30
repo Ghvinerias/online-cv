@@ -343,7 +343,6 @@ education:
         time: 2016 - 2021
         details: |
           Me and two friends participated in the "Edison League" tournament, where we showcased our creative thinking and teamwork skills, and we each received a $10,000 grant to cover our university fees
-    info:
       - degree: LPIC-1
         university: Linux Professional Institute
         time: 	2022-06-04
@@ -367,14 +366,13 @@ experiences:
             - Paved the road to migrate in-house developed products to K8S;
             - Improved Application and Application Server monitoring in Zabbix;
             - Troubleshoot and manage Jenkins/Nginx/IIS WebService/Windows Services/Linux Services;
-            - Manage application pathing procedures;
-            - Contribute to IT Operations team 99.999% uptime quota.
+            - Manage application patching procedures;
       - role: Systems Administration
         time: April 2021 - July 2022
         company: HCOJ - High Council Of Justice Of Georgia
         details: |
-            - Support and maintain 170+ Virtual machines, both Windows and Linux;
             - Provisioned Dev/Test/Pre/Prod environments for newly developed application, project included MongoDB, RabbitMQ, NextJS and .Net Core frameworks.
+            - Support and maintain 170+ Virtual machines, both Windows and Linux;
             - Ensure that all server hardware, operating systems, software and procedures are aligned with organizational standards and strategic business plan;
             - Troubleshooting problems with virtual machines as well as hardware that runs our hypervisors;
             - Manage vCenter and ESXI Hosts;
@@ -480,13 +478,13 @@ skills:
       - name: Windows
         level: 70%
 
+      - name: Terraform
+        level: 50%
+
       - name: Jenkins
         level: 80%
 
       - name: Ansible
-        level: 50%
-
-      - name: Terraform
         level: 50%
 
       - name: Proxmox
