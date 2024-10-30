@@ -15,24 +15,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Download PDF
-        env:
-          PDF_API_KEY: ${{ secrets.PDF_API_KEY_NEW }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Convert webpage to PDF
         run: |
-              response=$(curl -s -X POST https://v2.convertapi.com/convert/web/to/pdf -H "Authorization: Bearer ${PDF_API_KEY_NEW}" -F "Url=https://ghvinerias.github.io/online-cv/print" -F "StoreFile=true" -F "FileName=Aleksandre-Ghvineria-CV-EN")
-              pdf_url=$(echo "$response" | jq -r '.Files[0].Url')
-              curl -o Aleksandre-Ghvineria-CV-EN.pdf "$pdf_url"
+          node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+              const browser = await puppeteer.launch();
+              const page = await browser.newPage();
+              await page.goto('https://ghvinerias.github.io/online-cv/print', { waitUntil: 'networkidle2' });
+              await page.pdf({ path: 'page.pdf', format: 'A4', margin: { top: '2px', right: '2px', bottom: '2px', left: '2px' } });
+              await browser.close();
+          })();
+          "
 
-      - name: Create assets directory
-        run: mkdir -p assets/pdf
+      # - name: Download PDF
+      #   env:
+      #     PDF_API_KEY: ${{ secrets.PDF_API_KEY_NEW }}
+      #   run: |
+      #         response=$(curl -s -X POST https://v2.convertapi.com/convert/web/to/pdf -H "Authorization: Bearer ${PDF_API_KEY_NEW}" -F "Url=https://ghvinerias.github.io/online-cv/print" -F "StoreFile=true" -F "FileName=Aleksandre-Ghvineria-CV-EN")
+      #         pdf_url=$(echo "$response" | jq -r '.Files[0].Url')
+      #         curl -o Aleksandre-Ghvineria-CV-EN.pdf "$pdf_url"
 
-      - name: Move PDF to assets directory
-        run: mv Aleksandre-Ghvineria-CV-EN1.pdf assets/pdf/
+      # - name: Create assets directory
+      #   run: mkdir -p assets/pdf
+
+      # - name: Move PDF to assets directory
+      #   run: mv Aleksandre-Ghvineria-CV-EN1.pdf assets/pdf/
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/
+          git add page.pdf
           git commit -m "Add generated CV"
           git push
