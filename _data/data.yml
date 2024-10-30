@@ -101,7 +101,7 @@ education:
         university: Scientific Cyber Security Association
         time: 	11/2020 - 12/2020
 experiences:
-    title: Experiences
+    title: Recent Experiences
     info:
       - role: Application Server Administration
         time: July 2022 - Present
@@ -139,14 +139,14 @@ experiences:
           Provide support for desktop computer operating
           systems Microsoft Apps and hardware/peripherals,
           work with individuals across the country.
-      - role: Contractor
-        time: April 2019 - April 2020
-        company: Concept Pharma - Pharmaceutical Company
-        details: |
-            - Ensured reliable and stable operation of computers, network, printers, WiFi Access Points;
-            - Maintained Backups;
-            - Maintained Cloud-Hosted E-mail;
-            - Maintained Cloud-Hosted Web-Site.
+      # - role: Contractor
+      #   time: April 2019 - April 2020
+      #   company: Concept Pharma - Pharmaceutical Company
+      #   details: |
+      #       - Ensured reliable and stable operation of computers, network, printers, WiFi Access Points;
+      #       - Maintained Backups;
+      #       - Maintained Cloud-Hosted E-mail;
+      #       - Maintained Cloud-Hosted Web-Site.
 projects:
     title: Projects
     intro: >
