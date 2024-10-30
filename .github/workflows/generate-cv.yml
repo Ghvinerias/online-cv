@@ -57,7 +57,12 @@ jobs:
               });
               const page = await browser.newPage();
               await page.goto('https://ghvinerias.github.io/online-cv/print', { waitUntil: 'networkidle2' });
-              await page.pdf({ path: 'page.pdf', format: 'A4', margin: { top: '2px', right: '2px', bottom: '2px', left: '2px' } });
+              await page.pdf({
+                  path: 'page.pdf',
+                  format: 'A4',
+                  margin: { top: '2px', right: '2px', bottom: '2px', left: '2px' },
+                  printBackground: true  // Ensures colors and backgrounds are saved
+              });
               await browser.close();
           })();
           "
