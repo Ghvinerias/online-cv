@@ -319,16 +319,16 @@ sidebar:
         - item: Electrical Engineering
           link:
 
-        - item: Cars
+        - item: Home Automation
           link:
 
-        - item: Home Automation
+        - item: HomeLAB
           link:
 
 career-profile:
     title: Career Profile
     summary: |
-      Experienced in various IT roles, including Application Server Administration, Systems Administration, and Desktop Support,
+      Experienced in various IT roles, including Application lifecycle automation, Application Server Administration, Systems Administration, and Desktop Support,
       with a focus on ensuring the smooth operation of critical IT infrastructure and services. Proficient
       in optimizing application patching processes, adhering to IT operations standards and best practices,
       troubleshooting and managing various web services and systems, and maintaining high uptime percentages.
@@ -343,6 +343,19 @@ education:
         time: 2016 - 2021
         details: |
           Me and two friends participated in the "Edison League" tournament, where we showcased our creative thinking and teamwork skills, and we each received a $10,000 grant to cover our university fees
+    info:
+      - degree: LPIC-1
+        university: Linux Professional Institute
+        time: 	2022-06-04
+        details: |
+          LPID: LPI000523471
+          Verification Code: 5lhcz7x9r5
+      - degree: LPIC-2
+        university: Linux Professional Institute
+        time: 	2023-02-05
+        details: |
+          LPID: LPI000523471
+          Verification Code: pdycar254f
 experiences:
     title: Experiences
     info:
@@ -391,21 +404,6 @@ experiences:
             - Maintained Backups;
             - Maintained E-mail;
             - Maintained Web-Site.
-certifications:
-    title: Experiences
-    info:
-      - degree: LPIC-1
-        university: Linux Professional Institute
-        time: 	2022-06-04
-        details: |
-          LPID: LPI000523471
-          Verification Code: 5lhcz7x9r5
-      - degree: LPIC-2
-        university: Linux Professional Institute
-        time: 	2023-02-05
-        details: |
-          LPID: LPI000523471
-          Verification Code: pdycar254f
 projects:
     title: Projects
     intro: >
@@ -486,6 +484,9 @@ skills:
         level: 80%
 
       - name: Ansible
+        level: 50%
+
+      - name: Terraform
         level: 50%
 
       - name: Proxmox
