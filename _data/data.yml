@@ -275,6 +275,7 @@
 #
 
 sidebar:
+    position: left
     about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
     education: True # set to False if you want education in main section instead of in sidebar
 
@@ -297,7 +298,7 @@ sidebar:
 #    bitbucket:
 #    twitter: 
 #    stack-overflow: # Number/Username, e.g. 123456/alandoe
-#    codewars:
+    bootdotdev: https://www.boot.dev/u/slick_g
 #    goodreads: # Number-Username, e.g. 123456-alandoe
     pdf: https://raw.githubusercontent.com/Ghvinerias/online-cv/master/assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
 
@@ -335,6 +336,7 @@ career-profile:
       Skilled in supporting and maintaining virtual machines, managing server hardware and backups, and providing
       technical assistance for desktop systems and peripherals.
       Committed to delivering reliable and stable IT operations while aligning with organizational standards and strategic plans.
+      Experienced in using Cloudflare, Cloudflare Zero Trust, Hetzner, Akamai Cloud, Tailscale, Wireguard, Terraform, Bitwarder Secrets Manager, HashicorpVault, 
 education:
     title: Education
     info:
@@ -345,16 +347,19 @@ education:
           Me and two friends participated in the "Edison League" tournament, where we showcased our creative thinking and teamwork skills, and we each received a $10,000 grant to cover our university fees
       - degree: LPIC-1
         university: Linux Professional Institute
-        time: 	2022-06-04
+        time: 	02/2022 - 04/2022
         details: |
           LPID: LPI000523471
           Verification Code: 5lhcz7x9r5
       - degree: LPIC-2
         university: Linux Professional Institute
-        time: 	2023-02-05
+        time: 	11/2023 - 02/2023
         details: |
           LPID: LPI000523471
           Verification Code: pdycar254f
+      - degree: System administration and security course
+        university: Scientific Cyber Security Association
+        time: 	11/2020 - 12/2020
 experiences:
     title: Experiences
     info:
@@ -400,8 +405,8 @@ experiences:
         details: |
             - Ensured reliable and stable operation of computers, network, printers, WiFi Access Points;
             - Maintained Backups;
-            - Maintained E-mail;
-            - Maintained Web-Site.
+            - Maintained Cloud-Hosted E-mail;
+            - Maintained Cloud-Hosted Web-Site.
 projects:
     title: Projects
     intro: >
@@ -414,6 +419,10 @@ projects:
      - title: Golang Tools
        link: "https://github.com/Ghvinerias/learning-golang"
        tagline: "A collection of tools that I wrote in golang, some of them are still a work-in-progress, but most of them have helped me out in a tight situation."
+
+     - title: HomeLAB
+       link: "https://github.com/Ghvinerias/learning-golang"
+       tagline: "A project that almost every self-respecting tech enthusiast has, this project is never completed, it is always in a constant state of changes."
 #
 #      - title: Tempo
 #        link: "#"
