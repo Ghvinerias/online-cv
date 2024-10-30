@@ -35,7 +35,8 @@ jobs:
             libpango1.0-0 \
             libasound2 \
             libxshmfence1 \
-            libgbm-dev
+            libgbm-dev \
+            libxkbcommon0  # Added missing library
 
       - name: Install Puppeteer
         run: npm install puppeteer
