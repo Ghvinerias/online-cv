@@ -72,8 +72,9 @@ jobs:
 
       - name: Download PDF
         env:
-          PDF_API_KEY: ${{ secrets.PDF_API_KEY }}
-        run: wget -O Aleksandre-Ghvineria-CV-EN.pdf "http://api.pdflayer.com/api/convert?access_key=${PDF_API_KEY}&document_url=https://ghvinerias.github.io/online-cv/print"
+          PDF_API_KEY: ${{ secrets.PDF_API_KEY_NEW }}
+        # run: wget -O Aleksandre-Ghvineria-CV-EN.pdf "http://api.pdflayer.com/api/convert?access_key=${PDF_API_KEY}&document_url=https://ghvinerias.github.io/online-cv/print"
+        run: 'curl -X POST https://v2.convertapi.com/convert/web/to/pdf -H "Authorization: Bearer ${PDF_API_KEY_NEW}" -F "Url=https://ghvinerias.github.io/online-cv/print" -o Aleksandre-Ghvineria-CV-EN.pdf"'
 
       - name: Create assets directory
         run: mkdir -p assets/pdf
