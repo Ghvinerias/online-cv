@@ -62,6 +62,7 @@ jobs:
                   format: 'A4',
                   margin: { top: '2px', right: '2px', bottom: '2px', left: '2px' },
                   printBackground: true  // Ensures colors and backgrounds are saved
+                  landscape: true  // Ensures colors and backgrounds are saved
               });
               await browser.close();
           })();
