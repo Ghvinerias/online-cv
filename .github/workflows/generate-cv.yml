@@ -11,81 +11,32 @@ permissions:
 jobs:
   generate_cv:
     runs-on: self-hosted
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies for Puppeteer
+      - name: Download PDF
+        env:
+          PDF_API_KEY: ${{ secrets.CONVERTAPI_TOKEN }}
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libx11-xcb1 \
-            libxcb-dri3-0 \
-            libxcomposite1 \
-            libxdamage1 \
-            libxfixes3 \
-            libxrandr2 \
-            libgbm1 \
-            libasound2 \
-            libatk1.0-0 \
-            libatk-bridge2.0-0 \
-            libcups2 \
-            libdbus-1-3 \
-            libdrm2 \
-            libgtk-3-0 \
-            libnspr4 \
-            libnss3 \
-            libxshmfence1 \
-            libx11-6 \
-            libx11-xcb-dev
+          wget -O web-to-pdf "https://raw.githubusercontent.com/Ghvinerias/learning-golang/refs/heads/main/web-to-pdf/build/linux/web-to-pdf"
+          chmod +x ./web-to-pdf
+          ./web-to-pdf https://ghvinerias.github.io/online-cv/print
+        
+      - name: Create assets directory
+        run: mkdir -p assets/pdf
 
-      - name: Install Puppeteer
-        run: npm install puppeteer
+      - name: Move PDF to assets directory
+        run: mv temp.pdf assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
 
-      - name: Convert webpage to PDF
-        run: |
-          node -e "
-          const puppeteer = require('puppeteer');
-          (async () => {
-              const browser = await puppeteer.launch({
-                  args: ['--no-sandbox']
-              });
-              const page = await browser.newPage();
-              await page.goto('https://ghvinerias.github.io/online-cv/print', { waitUntil: 'networkidle2' });
-              await page.pdf({
-                  path: 'page.pdf',
-                  format: 'A4',
-                  margin: { top: '2px', right: '2px', bottom: '2px', left: '2px' },
-                  printBackground: true  // Ensures colors and backgrounds are saved
-                  landscape: false  // Ensures colors and backgrounds are saved
-              });
-              await browser.close();
-          })();
-          "
-
-      # - name: Download PDF
-      #   env:
-      #     PDF_API_KEY: ${{ secrets.PDF_API_KEY_NEW }}
-      #   run: |
-      #         response=$(curl -s -X POST https://v2.convertapi.com/convert/web/to/pdf -H "Authorization: Bearer ${PDF_API_KEY_NEW}" -F "Url=https://ghvinerias.github.io/online-cv/print" -F "StoreFile=true" -F "FileName=Aleksandre-Ghvineria-CV-EN")
-      #         pdf_url=$(echo "$response" | jq -r '.Files[0].Url')
-      #         curl -o Aleksandre-Ghvineria-CV-EN.pdf "$pdf_url"
-
-      # - name: Create assets directory
-      #   run: mkdir -p assets/pdf
-
-      # - name: Move PDF to assets directory
-      #   run: mv Aleksandre-Ghvineria-CV-EN1.pdf assets/pdf/
+      - name: cleanup
+        run: rm -rf ./web-to-pdf
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add page.pdf
+          git add assets/
           git commit -m "Add generated CV"
           git push

@@ -8,8 +8,8 @@ name: Deploy Jekyll site to Pages
 
 on:
   # Runs on pushes targeting the default branch
-  # push:
-  #   branches: ["master"]
+  push:
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -72,15 +72,21 @@ jobs:
 
       - name: Download PDF
         env:
-          PDF_API_KEY: ${{ secrets.PDF_API_KEY_NEW }}
-        # run: wget -O Aleksandre-Ghvineria-CV-EN.pdf "http://api.pdflayer.com/api/convert?access_key=${PDF_API_KEY}&document_url=https://ghvinerias.github.io/online-cv/print"
-        run: 'curl -X POST https://v2.convertapi.com/convert/web/to/pdf -H "Authorization: Bearer ${PDF_API_KEY_NEW}" -F "Url=https://ghvinerias.github.io/online-cv/print" -o Aleksandre-Ghvineria-CV-EN.pdf"'
-
+          PDF_API_KEY: ${{ secrets.CONVERTAPI_TOKEN }}
+        run: |
+          rm -rf assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
+          wget -O web-to-pdf "https://raw.githubusercontent.com/Ghvinerias/learning-golang/refs/heads/main/web-to-pdf/build/linux/web-to-pdf"
+          chmod +x ./web-to-pdf
+          ./web-to-pdf https://ghvinerias.github.io/online-cv/print
+        
       - name: Create assets directory
         run: mkdir -p assets/pdf
 
       - name: Move PDF to assets directory
-        run: mv Aleksandre-Ghvineria-CV-EN.pdf assets/pdf/
+        run: mv temp.pdf assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
+
+      - name: cleanup
+        run: rm -rf ./web-to-pdf
 
       - name: Commit and push changes
         run: |
