@@ -108,7 +108,6 @@ experiences:
         company: JSC Liberty Bank
         details: |
             - Overhauled application deployment and rollback pipelines using Jenkins, implemented SonarQube into build process to maintain code quality in Test/Pre/Production environments;
-            - Paved the road to migrate in-house developed products to K8S;
             - Improved Application and Application Server monitoring in Zabbix;
             - Troubleshoot and manage Jenkins/Nginx/IIS WebService/Windows Services/Linux Services;
             - Manage application patching procedures;
