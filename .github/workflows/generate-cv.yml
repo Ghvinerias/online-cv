@@ -18,8 +18,9 @@ jobs:
 
       - name: Download PDF
         env:
-          PDF_API_KEY: ${{ secrets.CONVERTAPI_TOKEN }}
+          CONVERTAPI_TOKEN: ${{ secrets.CONVERTAPI_TOKEN }}
         run: |
+          rm -rf assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
           wget -O web-to-pdf "https://raw.githubusercontent.com/Ghvinerias/learning-golang/refs/heads/main/web-to-pdf/build/linux/web-to-pdf"
           chmod +x ./web-to-pdf
           ./web-to-pdf https://ghvinerias.github.io/online-cv/print
