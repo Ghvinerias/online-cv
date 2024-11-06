@@ -80,26 +80,26 @@ career-profile:
 education:
     title: Education
     info:
-      - degree: BSc in Electrical & Computer Engineering
-        university: Agricultural Univeristy of Tbilisi
-        time: 2016 - 2021
-        details: |
-          Me and two friends participated in the "Edison League" tournament, where we showcased our creative thinking and teamwork skills, and we each received a $10,000 grant to cover our university fees
-      - degree: LPIC-1
-        university: Linux Professional Institute
-        time: 	02/2022 - 04/2022
-        details: |
-          LPID: LPI000523471
-          Verification Code: 5lhcz7x9r5
       - degree: LPIC-2
         university: Linux Professional Institute
         time: 	11/2023 - 02/2023
         details: |
           LPID: LPI000523471
           Verification Code: pdycar254f
+      - degree: LPIC-1
+        university: Linux Professional Institute
+        time: 	02/2022 - 04/2022
+        details: |
+          LPID: LPI000523471
+          Verification Code: 5lhcz7x9r5
       - degree: System administration and security course
         university: Scientific Cyber Security Association
         time: 	11/2020 - 12/2020
+      - degree: BSc in Electrical & Computer Engineering
+        university: Agricultural University of Tbilisi
+        time: 2016 - 2021
+        details: |
+          Me and two friends participated in the "Edison League" tournament, where we showcased our creative thinking and teamwork skills, and we each received a $10,000 grant to cover our university fees
 experiences:
     title: Recent Experiences
     info:
@@ -160,7 +160,7 @@ projects:
        tagline: "A collection of tools that I wrote in golang, some of them are still a work-in-progress, but most of them have helped me out in a tight situation."
 
      - title: HomeLAB
-       link: "https://github.com/Ghvinerias/learning-golang"
+       link: "https://github.com/Ghvinerias/homelab"
        tagline: "A project that almost every self-respecting tech enthusiast has, this project is never completed, it is always in a constant state of flux."
 
 footer: >
