@@ -1,6 +1,6 @@
 # DISCLAIMER
 
-> This project was no developed by me, I forked an amazing repo and did some changes.
+> This project was not developed by me, I forked an amazing repo and did some changes.
 > I left original README contents below for information sake.
 
 # Orbit
