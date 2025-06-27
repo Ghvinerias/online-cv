@@ -29,7 +29,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # Using GitHub cloud runner
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,14 +56,14 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # Using GitHub cloud runner
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
   generate_cv:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # Using GitHub cloud runner
     needs: deploy
 
     steps:
