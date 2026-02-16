@@ -1,0 +1,23 @@
+{% if data.projects %}
+<section class="section">
+  <div class="section-header">
+    <h2>{{ data.projects.title }}</h2>
+    <p class="muted">{{ data.projects.intro }}</p>
+  </div>
+  <div class="stack">
+    {% for project in data.projects.assignments %}
+    <article class="card">
+      <div class="card-header">
+        <div>
+          <h3>{{ project.title }}</h3>
+          <div class="muted">{{ project.tagline }}</div>
+        </div>
+        {% if project.link %}
+        <a class="pill link" href="{{ project.link }}" target="_blank" rel="noopener">View</a>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

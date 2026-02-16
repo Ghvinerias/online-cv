@@ -1,0 +1,12 @@
+{% if data.sidebar.languages %}
+<section class="section">
+  <div class="section-header">
+    <h2>{{ data.sidebar.languages.title }}</h2>
+  </div>
+  <ul class="list">
+    {% for lang in data.sidebar.languages.info %}
+    <li><strong>{{ lang.idiom }}</strong><span>{{ lang.level }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

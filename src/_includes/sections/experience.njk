@@ -1,0 +1,21 @@
+{% if data.experiences %}
+<div class="section-header">
+  <h2>{{ data.experiences.title }}</h2>
+</div>
+<div class="stack">
+  {% for exp in data.experiences.info %}
+  <article class="card">
+    <div class="card-header">
+      <div>
+        <h3>{{ exp.role }}</h3>
+        <div class="muted">{{ exp.company }}</div>
+      </div>
+      <span class="pill">{{ exp.time }}</span>
+    </div>
+    {% if exp.details %}
+    <div class="card-body">{{ exp.details | markdown }}</div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body class="{{ pageClass | default('') }}">
+    {% block content %}{% endblock %}
+  </body>
+</html>
