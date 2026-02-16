@@ -118,7 +118,7 @@ education:
   info:
     - degree: LPIC-2
       university: Linux Professional Institute
-      time: 11/2023 - 02/2023
+      time: 11/2023 - 02/2024
       details: |
         LPID: LPI000523471
         Verification Code: pdycar254f
@@ -180,27 +180,6 @@ experiences:
         - Responded to requests for technical assistance in person via phone and remotely for Windows and Mac OS based endpoints (Laptops & Desktops);
         - Provided support for desktop computer operating systems, Microsoft Apps, and hardware/peripherals;
         - Worked with individuals across the country.
-    - role: Service Engineer
-      time: 2019 - 2022
-      company: High Council of Justice of Georgia
-      details: |
-        - Started as Service Desk engineer, promoted to Systems Administrator;
-        - Supported IT infrastructure for High Council of Justice and all courts in Georgia (1000+ computers, 100+ servers, 100+ network devices);
-        - Managed and maintained all computer hardware including servers, workstations, printers, and peripherals;
-        - Played key role in planning and executing major IT infrastructure upgrade project (migrating to new data center with minimal downtime);
-        - Implemented Windows imaging and deployment flow with WSUS for faster computer provisioning and patch management;
-        - Improved Bitdefender antivirus with more frequent scans, better coverage, and better patch management;
-        - Improved user awareness and training to prevent security incidents.
-    - role: Desktop Support
-      time: 2018 - 2019
-      company: UGT - Technology Company
-      details: |
-        - Started as service engineer, moved to outsource support department;
-        - Supported 200+ companies with day-to-day IT issues from head office;
-        - Later assigned as on-site support for a Medical center;
-        - Responsible for supporting and maintaining all computer hardware including medical equipment (sonar, MRI, etc.);
-        - Documented all tasks in ManageEngine ServiceDesk and Confluence knowledge base;
-        - Created runbooks for common issues and procedures.
     - role: Freelance IT Support
       time: 2017 - 2018
       company: Freelance
