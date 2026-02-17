@@ -1,4 +1,4 @@
-{% set s = data.sidebar %}
+{% set s = resume.sidebar %}
 <ul class="contact-list">
   {% if s.email %}<li><span>Email</span><a href="mailto:{{ s.email }}">{{ s.email }}</a></li>{% endif %}
   {% if s.phone %}<li><span>Phone</span><a href="tel:{{ s.phone | replace(" ", "") }}">{{ s.phone }}</a></li>{% endif %}

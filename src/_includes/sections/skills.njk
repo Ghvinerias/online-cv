@@ -1,10 +1,10 @@
-{% if data.skills %}
+{% if resume.skills %}
 <section class="section">
   <div class="section-header">
-    <h2>{{ data.skills.title }}</h2>
+    <h2>{{ resume.skills.title }}</h2>
   </div>
   <div class="chips">
-    {% for skill in data.skills.toolset %}
+    {% for skill in resume.skills.toolset %}
     <div class="chip">
       <span>{{ skill.name }}</span>
       <small>{{ skill.level }}</small>

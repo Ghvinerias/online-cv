@@ -1,11 +1,11 @@
-{% if data.projects %}
+{% if resume.projects %}
 <section class="section">
   <div class="section-header">
-    <h2>{{ data.projects.title }}</h2>
-    <p class="muted">{{ data.projects.intro }}</p>
+    <h2>{{ resume.projects.title }}</h2>
+    <p class="muted">{{ resume.projects.intro }}</p>
   </div>
   <div class="stack">
-    {% for project in data.projects.assignments %}
+    {% for project in resume.projects.assignments %}
     <article class="card">
       <div class="card-header">
         <div>

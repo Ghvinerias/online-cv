@@ -1,9 +1,9 @@
-{% if data.experiences %}
+{% if resume.experiences %}
 <div class="section-header">
-  <h2>{{ data.experiences.title }}</h2>
+  <h2>{{ resume.experiences.title }}</h2>
 </div>
 <div class="stack">
-  {% for exp in data.experiences.info %}
+  {% for exp in resume.experiences.info %}
   <article class="card">
     <div class="card-header">
       <div>

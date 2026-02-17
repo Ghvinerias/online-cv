@@ -1,10 +1,10 @@
-{% if data.sidebar.languages %}
+{% if resume.sidebar.languages %}
 <section class="section">
   <div class="section-header">
-    <h2>{{ data.sidebar.languages.title }}</h2>
+    <h2>{{ resume.sidebar.languages.title }}</h2>
   </div>
   <ul class="list">
-    {% for lang in data.sidebar.languages.info %}
+    {% for lang in resume.sidebar.languages.info %}
     <li><strong>{{ lang.idiom }}</strong><span>{{ lang.level }}</span></li>
     {% endfor %}
   </ul>

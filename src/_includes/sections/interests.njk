@@ -1,10 +1,10 @@
-{% if data.sidebar.interests %}
+{% if resume.sidebar.interests %}
 <section class="section">
   <div class="section-header">
-    <h2>{{ data.sidebar.interests.title }}</h2>
+    <h2>{{ resume.sidebar.interests.title }}</h2>
   </div>
   <ul class="list compact">
-    {% for interest in data.sidebar.interests.info %}
+    {% for interest in resume.sidebar.interests.info %}
     <li>{{ interest.item }}</li>
     {% endfor %}
   </ul>
