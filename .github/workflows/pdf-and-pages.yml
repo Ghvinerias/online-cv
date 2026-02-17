@@ -1,0 +1,93 @@
+name: Build PDF and Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate PDF from print view
+        run: |
+          node - <<'NODE'
+          const { chromium } = require('playwright');
+          const path = require('path');
+          const fs = require('fs');
+          const filePath = path.resolve('dist/print/index.html');
+          const outDir = path.resolve('src/assets/pdf');
+          const outFile = path.join(outDir, 'Aleksandre-Ghvineria-CV-EN.pdf');
+
+          if (!fs.existsSync(filePath)) {
+            console.error('print page not found:', filePath);
+            process.exit(1);
+          }
+          if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+
+          (async () => {
+            const browser = await chromium.launch();
+            const page = await browser.newPage();
+            await page.goto('file://' + filePath, { waitUntil: 'networkidle' });
+            await page.pdf({
+              path: outFile,
+              format: 'A4',
+              printBackground: true,
+              margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+            });
+            await browser.close();
+            console.log('PDF generated:', outFile);
+          })().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Commit PDF
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add src/assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf
+          git commit -m "Update generated CV PDF" || echo "No changes to commit"
+          git push
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
