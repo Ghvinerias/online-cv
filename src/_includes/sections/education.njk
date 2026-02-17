@@ -14,7 +14,7 @@
         <span class="pill">{{ edu.time }}</span>
       </div>
       {% if edu.details %}
-      <div class="card-body">{{ edu.details | markdown }}</div>
+      <div class="card-body">{{ edu.details | markdown | safe }}</div>
       {% endif %}
     </article>
     {% endfor %}

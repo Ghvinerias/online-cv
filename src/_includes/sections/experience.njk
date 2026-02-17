@@ -13,7 +13,7 @@
       <span class="pill">{{ exp.time }}</span>
     </div>
     {% if exp.details %}
-    <div class="card-body">{{ exp.details | markdown }}</div>
+    <div class="card-body">{{ exp.details | markdown | safe }}</div>
     {% endif %}
   </article>
   {% endfor %}
