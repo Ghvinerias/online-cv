@@ -33,7 +33,7 @@ pageClass: print
           <strong>{{ exp.role }}</strong> — {{ exp.company }}
           <span class="timeline-time">{{ exp.time }}</span>
         </div>
-        <div class="timeline-body">{{ exp.details | markdown }}</div>
+        <div class="timeline-body">{{ exp.details | markdown | safe }}</div>
       </div>
       {% endfor %}
     </div>
