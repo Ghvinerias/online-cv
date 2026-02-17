@@ -1,0 +1,252 @@
+{
+  "sidebar": {
+    "position": "left",
+    "about": true,
+    "education": true,
+    "name": "Aleksandre Ghvineia",
+    "tagline": "DevOps Practitioner",
+    "avatar": "profile.png",
+    "email": "ghvineriaa@gmail.com",
+    "phone": "+995 557 48 38 58",
+    "pdf": "/assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf",
+    "linkedin": "aleksandre-ghvineria",
+    "github": "ghvinerias",
+    "bootdotdev": "slick_g",
+    "lpi": "LPI ID: LPI000523471",
+    "lpi-url": "https://cs.lpi.org/caf/Xamman/certification/verify/LPI000523471/5lhcz7x9r5",
+    "languages": {
+      "title": "Languages",
+      "info": [
+        {
+          "idiom": "Georgian",
+          "level": "Native"
+        },
+        {
+          "idiom": "English",
+          "level": "Professional"
+        },
+        {
+          "idiom": "Russian",
+          "level": "Professional"
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "info": [
+        {
+          "item": "Electrical Engineering",
+          "link": null
+        },
+        {
+          "item": "Home Automation",
+          "link": null
+        },
+        {
+          "item": "HomeLAB",
+          "link": null
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills &amp; Proficiency",
+      "toolset": [
+        {
+          "name": "Linux",
+          "level": "85%"
+        },
+        {
+          "name": "Windows",
+          "level": "80%"
+        },
+        {
+          "name": "Kubernetes",
+          "level": "75%"
+        },
+        {
+          "name": "Jenkins",
+          "level": "90%"
+        },
+        {
+          "name": "Ansible",
+          "level": "80%"
+        },
+        {
+          "name": "Proxmox",
+          "level": "80%"
+        },
+        {
+          "name": "ESXi",
+          "level": "75%"
+        },
+        {
+          "name": "Terraform",
+          "level": "60%"
+        },
+        {
+          "name": "Docker",
+          "level": "70%"
+        },
+        {
+          "name": "Zabbix",
+          "level": "75%"
+        },
+        {
+          "name": "Prometheus",
+          "level": "70%"
+        },
+        {
+          "name": "Grafana",
+          "level": "70%"
+        },
+        {
+          "name": "Bitwarden Secrets Manager",
+          "level": "80%"
+        },
+        {
+          "name": "GitHub Actions",
+          "level": "75%"
+        },
+        {
+          "name": "GCP",
+          "level": "70%"
+        },
+        {
+          "name": "AWS",
+          "level": "50%"
+        },
+        {
+          "name": "Cloudflare",
+          "level": "60%"
+        },
+        {
+          "name": "Tailscale",
+          "level": "60%"
+        },
+        {
+          "name": "Wireguard",
+          "level": "60%"
+        }
+      ]
+    }
+  },
+  "career-profile": {
+    "title": "Career Profile",
+    "summary": "Experienced in various IT roles, including Application lifecycle automation, Application Server Administration, Systems Administration, and Desktop Support,\nwith a focus on ensuring the smooth operation of critical IT infrastructure and services. Proficient\nin optimizing application patching processes, adhering to IT operations standards and best practices,\ntroubleshooting and managing various web services and systems, and maintaining high uptime percentages.\nSkilled in supporting and maintaining virtual machines, managing server hardware and backups, and providing\ntechnical assistance for desktop systems and peripherals.\nCommitted to delivering reliable and stable IT operations while aligning with organizational standards and strategic plans.\nI have varying experience in using Cloudflare, Cloudflare Zero Trust, Hetzner, Akamai Cloud, Tailscale, Wireguard, Terraform, Bitwarden Secrets Manager, Hashicorp Vault, Ansible, Docker, Filebeat, ELK Stack, Zabbix, GitHub Actions, Prometheus, Grafana, InfluxDB, BitBucket CI/CD.\n"
+  },
+  "education": {
+    "title": "Education",
+    "info": [
+      {
+        "degree": "LPIC-2",
+        "university": "Linux Professional Institute",
+        "time": "11/2023 - 02/2024",
+        "details": "LPID: LPI000523471\nVerification Code: pdycar254f\n"
+      },
+      {
+        "degree": "LPIC-1",
+        "university": "Linux Professional Institute",
+        "time": "02/2022 - 04/2022",
+        "details": "LPID: LPI000523471\nVerification Code: 5lhcz7x9r5\n"
+      },
+      {
+        "degree": "System administration and security course",
+        "university": "Scientific Cyber Security Association",
+        "time": "11/2020 - 12/2020"
+      },
+      {
+        "degree": "BSc in Electrical & Computer Engineering",
+        "university": "Agricultural University of Tbilisi",
+        "time": "2016 - 2021",
+        "details": "Me and two friends participated in the \"Edison League\" tournament (for 11th-12th grade students), where we solved STEM problems including: building a paper arch supporting the most weight, solving a gear puzzle, and building a rubber band-powered car driving the longest distance;\nWe each received a ₾10,000 grant to cover university fees;\nBuilt remote start system for Gen 2/3 Toyota Prius as a university project.\n"
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Recent Experiences",
+    "info": [
+      {
+        "role": "System Engineer",
+        "time": "April 2025 - Present",
+        "company": "EPAM Systems",
+        "details": "- Work with GitHub Advanced Security (GHAS), Mend.io, and CodeQL for security scanning;\n- Focus on GCP cloud platform;\n- Quick response times and high-quality work as noted by requesters.\n"
+      },
+      {
+        "role": "Application Server Administration",
+        "time": "July 2022 - March 2025",
+        "company": "JSC Liberty Bank",
+        "details": "- Overhauled build/deploy and rollback pipelines for all applications (frontend and backend), including new pipelines for applications without prior automation;\n- Implemented playbooks for rapid environment provisioning and application deployment in fast-paced environment;\n- Implemented RabbitMQ and IIS monitoring in Zabbix with specific metrics and alerts not available in general templates;\n- Troubleshoot and manage Jenkins/Nginx/IIS WebService/Windows Services/Linux Services;\n- Manage application patching procedures.\n"
+      },
+      {
+        "role": "Systems Administration",
+        "time": "April 2021 - July 2022",
+        "company": "HCOJ - High Council Of Justice Of Georgia",
+        "details": "- Provisioned Dev/Test/Pre/Prod environments for newly developed applications;\n- Support and maintain 170+ Virtual machines, both Windows and Linux;\n- Ensure that all server hardware, operating systems, software and procedures are aligned with organizational standards and strategic business plan;\n- Troubleshooting problems with virtual machines as well as hardware that runs hypervisors;\n- Manage vCenter and ESXI Hosts;\n- Manage VMware vCenter Backups using Veeam.\n"
+      },
+      {
+        "role": "Desktop Support",
+        "time": "April 2020 - March 2021",
+        "company": "HCOJ - High Council Of Justice Of Georgia",
+        "details": "- Desktop Support;\n- Proactively resolve IT related problems about equipment and services.\n"
+      },
+      {
+        "role": "Desktop Support",
+        "time": "August 2019 - March 2020",
+        "company": "UGT - Technology Company",
+        "details": "- Responded to requests for technical assistance in person via phone and remotely for Windows and Mac OS based endpoints (Laptops & Desktops);\n- Provided support for desktop computer operating systems, Microsoft Apps, and hardware/peripherals;\n- Worked with individuals across the country.\n"
+      },
+      {
+        "role": "Freelance IT Support",
+        "time": "2017 - 2018",
+        "company": "Freelance",
+        "details": "- Worked for multiple Pharma companies;\n- For Concept Pharma: network setup and maintenance, printer and PC troubleshooting, software installations/updates, staff training;\n- For other clients: networking wiring for new offices, planning and deploying networking gear and PCs for staff;\n- Implemented access lists for network segmentation, firewall rules, and regular firmware/software updates.\n"
+      },
+      {
+        "role": "Knick",
+        "time": 2016,
+        "company": "Knick (Smart NFC Ring Company)",
+        "details": "- In charge of manufacturing antenna coils for smart NFC rings;\n- Improved coil designs for better working range and more compact size;\n- Optimized coil geometry to improve signal strength and reduce interference;\n- Used in-house developed jig for speeding up reader-to-ring distance measurement;\n- Worked with natural wood materials and natural color ink;\n- Used CNC machines and laser cutters for physical coil components.\n"
+      },
+      {
+        "role": "IT Service Center",
+        "time": "2015 - 2016",
+        "company": "ITSC",
+        "details": "- Worked after school hours and during summer;\n- Troubleshoot, build, and service computer systems and printers;\n- Used in-house developed website for logging troubleshooting/maintenance steps;\n- Used remote desktop tools (TeamViewer, Remote Desktop Connection) for remote assistance;\n- Common issues: network drivers, printers, software installations, password resets, account lockouts;\n- Aimed to resolve issues same day or within a few hours for complex problems.\n"
+      },
+      {
+        "role": "Computer Development Center",
+        "time": 2014,
+        "company": "CDS",
+        "details": "- Worked after school hours and during summer break full time;\n- Troubleshoot, build, and service computer systems and printers;\n- Helped build and deploy 50+ computer systems for a Hospital;\n- Responsible for OS Deployment, configuration, and QC;\n- Used Acronis Clone for disk imaging and deployment;\n- Used PXE boot for faster deployment;\n- Configuration steps: language settings, timezone, network configuration, domain joining;\n- Baked drivers and software into images for easier post-deployment setup;\n- QC checks: driver verification, timezone/language/network checks, stress tests, temperature checks under load.\n"
+      },
+      {
+        "role": "Intellect Center",
+        "time": 2013,
+        "company": "Intellect Center",
+        "details": "- Worked after school hours for 6 months;\n- Basic computer hardware and software troubleshooting and servicing;\n- Used hardware tools: PSU tester, POST card, multimeter;\n- Disassembled and reassembled computer components;\n- Used software tools: Hiren's BootCD, MemTest86, antivirus and malware removal tools;\n- Performed OS installations and updates;\n- Experience with Windows and Linux distributions;\n- Used simple network switches, routers, access points, and modems.\n"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Small list of projects that I enjoy working on in my free time\n",
+    "assignments": [
+      {
+        "title": "Secret Santa",
+        "link": "https://github.com/slick-ge/secret-santa-backend",
+        "tagline": "Personal project to learn Golang. Backend built with Gin framework and GORM for database. Frontend by friend using React."
+      },
+      {
+        "title": "Golang Tools",
+        "link": "https://github.com/Ghvinerias/learning-golang",
+        "tagline": "Collection of tools: TCP port checker, HTTP load tester, web scraper, and MKV file converter using mkvmerge."
+      },
+      {
+        "title": "HomeLAB",
+        "link": "https://github.com/Ghvinerias/homelab",
+        "tagline": "Home lab with Proxmox, K8s, Docker, LXC, UniFi, OPNsense. Services: Jellyfin, Home Assistant, EMQX, Grafana, Prometheus, Zabbix, Loki, Infisical, Nginx, Ollama, RabbitMQ. Updates automated with Jenkins and Ansible."
+      }
+    ]
+  },
+  "footer": "Thank you for your time :)\n"
+}
