@@ -10,6 +10,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body class="{{ pageClass | default('') }}">
-    {% block content %}{% endblock %}
+    {{ content | safe }}
   </body>
 </html>
