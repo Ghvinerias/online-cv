@@ -1,0 +1,8 @@
+{% set s = resume.sidebar %}
+<ul class="contact-list">
+  {% if s.email %}<li><span>Email</span><a href="mailto:{{ s.email }}">{{ s.email }}</a></li>{% endif %}
+  {% if s.phone %}<li><span>Phone</span><a href="tel:{{ s.phone | replace(" ", "") }}">{{ s.phone }}</a></li>{% endif %}
+  {% if s.github %}<li><span>GitHub</span><a href="https://github.com/{{ s.github }}" target="_blank">{{ s.github }}</a></li>{% endif %}
+  {% if s.linkedin %}<li><span>LinkedIn</span><a href="https://linkedin.com/in/{{ s.linkedin }}" target="_blank">{{ s.linkedin }}</a></li>{% endif %}
+  {% if s.lpi %}<li><span>LPI</span><a href="{{ s["lpi-url"] }}" target="_blank">{{ s.lpi }}</a></li>{% endif %}
+</ul>

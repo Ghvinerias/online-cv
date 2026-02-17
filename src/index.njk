@@ -1,0 +1,45 @@
+---
+layout: base.njk
+pageClass: home
+---
+{% set d = resume %}
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="hero-main">
+      <div class="eyebrow">{{ d.sidebar.tagline }}</div>
+      <h1 class="hero-title">{{ d.sidebar.name }}</h1>
+      <p class="hero-subtitle">{{ d["career-profile"].summary | striptags }}</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="{{ d.sidebar.pdf }}" target="_blank" rel="noopener">Download PDF</a>
+        <a class="btn ghost" href="/print">Print-friendly</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      {% if d.sidebar.avatar %}
+      <img class="avatar" src="/assets/images/{{ d.sidebar.avatar }}" alt="{{ d.sidebar.name }}" />
+      {% endif %}
+      <div class="contact">
+        {% include "sections/contact.njk" %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container main-grid">
+  <section class="panel">
+    {% include "sections/experience.njk" %}
+  </section>
+
+  <aside class="sidebar">
+    {% include "sections/skills.njk" %}
+    {% include "sections/languages.njk" %}
+    {% include "sections/interests.njk" %}
+    {% include "sections/education.njk" %}
+    {% include "sections/projects.njk" %}
+  </aside>
+</main>
+
+<footer class="container footer">
+  <span>{{ d.footer }}</span>
+</footer>

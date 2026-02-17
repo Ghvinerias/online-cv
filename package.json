@@ -1,0 +1,16 @@
+{
+  "name": "online-cv",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --config=.eleventy.cjs",
+    "build": "eleventy --config=.eleventy.cjs",
+    "clean": "rimraf dist .cache"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0",
+    "rimraf": "^6.0.1"
+  }
+}

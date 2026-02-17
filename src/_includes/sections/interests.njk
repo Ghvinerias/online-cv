@@ -1,0 +1,12 @@
+{% if resume.sidebar.interests %}
+<section class="section">
+  <div class="section-header">
+    <h2>{{ resume.sidebar.interests.title }}</h2>
+  </div>
+  <ul class="list compact">
+    {% for interest in resume.sidebar.interests.info %}
+    <li>{{ interest.item }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

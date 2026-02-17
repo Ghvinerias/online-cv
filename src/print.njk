@@ -1,0 +1,75 @@
+---
+layout: base.njk
+pageClass: print
+---
+{% set d = resume %}
+
+<div class="print-wrapper">
+  <header class="print-header">
+    <div>
+      <h1>{{ d.sidebar.name }}</h1>
+      <p>{{ d.sidebar.tagline }}</p>
+    </div>
+    <div class="print-contact">
+      <div>{{ d.sidebar.email }}</div>
+      <div>{{ d.sidebar.phone }}</div>
+      <div>github.com/{{ d.sidebar.github }}</div>
+      <div>linkedin.com/in/{{ d.sidebar.linkedin }}</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p>{{ d["career-profile"].summary | striptags }}</p>
+  </section>
+
+  {% if d.experiences %}
+  <section>
+    <h2>{{ d.experiences.title }}</h2>
+    <div class="timeline">
+      {% for exp in d.experiences.info %}
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <strong>{{ exp.role }}</strong> — {{ exp.company }}
+          <span class="timeline-time">{{ exp.time }}</span>
+        </div>
+        <div class="timeline-body">{{ exp.details | markdown | safe }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if d.skills %}
+  <section>
+    <h2>{{ d.skills.title }}</h2>
+    <ul class="print-skills">
+      {% for skill in d.skills.toolset %}
+      <li>{{ skill.name }} — {{ skill.level }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if d.projects %}
+  <section>
+    <h2>{{ d.projects.title }}</h2>
+    <ul>
+      {% for project in d.projects.assignments %}
+      <li><strong>{{ project.title }}</strong> — {{ project.tagline }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if d.education %}
+  <section>
+    <h2>{{ d.education.title }}</h2>
+    <ul>
+      {% for edu in d.education.info %}
+      <li><strong>{{ edu.degree }}</strong>, {{ edu.university }} ({{ edu.time }})</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</div>

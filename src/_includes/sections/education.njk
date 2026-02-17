@@ -1,0 +1,23 @@
+{% if resume.education %}
+<section class="section">
+  <div class="section-header">
+    <h2>{{ resume.education.title }}</h2>
+  </div>
+  <div class="stack">
+    {% for edu in resume.education.info %}
+    <article class="card small">
+      <div class="card-header">
+        <div>
+          <h3>{{ edu.degree }}</h3>
+          <div class="muted">{{ edu.university }}</div>
+        </div>
+        <span class="pill">{{ edu.time }}</span>
+      </div>
+      {% if edu.details %}
+      <div class="card-body">{{ edu.details | markdown | safe }}</div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
