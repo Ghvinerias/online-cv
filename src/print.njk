@@ -20,7 +20,7 @@ pageClass: print
 
   <section>
     <h2>Profile</h2>
-    <p>{{ d.career-profile.summary | striptags }}</p>
+    <p>{{ d["career-profile"].summary | striptags }}</p>
   </section>
 
   {% if d.experiences %}
