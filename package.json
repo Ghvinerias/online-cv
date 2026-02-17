@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy",
+    "dev": "eleventy --serve --config=.eleventy.cjs",
+    "build": "eleventy --config=.eleventy.cjs",
     "clean": "rimraf dist .cache"
   },
   "devDependencies": {
