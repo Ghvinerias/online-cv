@@ -4,7 +4,7 @@
     "about": true,
     "education": true,
     "name": "Aleksandre Ghvineia",
-    "tagline": "DevOps Practitioner",
+    "tagline": "DevOps სპეციალისტი",
     "avatar": "profile.png",
     "email": "ghvineriaa@gmail.com",
     "phone": "+995 557 48 38 58",
@@ -15,31 +15,31 @@
     "lpi": "LPI ID: LPI000523471",
     "lpi-url": "https://cs.lpi.org/caf/Xamman/certification/verify/LPI000523471/5lhcz7x9r5",
     "languages": {
-      "title": "Languages",
+      "title": "ენები",
       "info": [
         {
-          "idiom": "Georgian",
-          "level": "Native"
+          "idiom": "ქართული",
+          "level": "მშობლიური"
         },
         {
-          "idiom": "English",
-          "level": "Professional"
+          "idiom": "ინგლისური",
+          "level": "პროფესიული"
         },
         {
-          "idiom": "Russian",
-          "level": "Professional"
+          "idiom": "რუსული",
+          "level": "პროფესიული"
         }
       ]
     },
     "interests": {
-      "title": "Interests",
+      "title": "ინტერესები",
       "info": [
         {
-          "item": "Electrical Engineering",
+          "item": "ელექტროინჟინერია",
           "link": null
         },
         {
-          "item": "Home Automation",
+          "item": "სმარტ სახლის ავტომატიზაცია",
           "link": null
         },
         {
@@ -49,7 +49,7 @@
       ]
     },
     "skills": {
-      "title": "Skills &amp; Proficiency",
+      "title": "უნარები &amp; კომპეტენცია",
       "toolset": [
         {
           "name": "Linux",
@@ -131,122 +131,122 @@
     }
   },
   "career-profile": {
-    "title": "Career Profile",
-    "summary": "Experienced in various IT roles, including Application lifecycle automation, Application Server Administration, Systems Administration, and Desktop Support,\nwith a focus on ensuring the smooth operation of critical IT infrastructure and services. Proficient\nin optimizing application patching processes, adhering to IT operations standards and best practices,\ntroubleshooting and managing various web services and systems, and maintaining high uptime percentages.\nSkilled in supporting and maintaining virtual machines, managing server hardware and backups, and providing\ntechnical assistance for desktop systems and peripherals.\nCommitted to delivering reliable and stable IT operations while aligning with organizational standards and strategic plans.\nI have varying experience in using Cloudflare, Cloudflare Zero Trust, Hetzner, Akamai Cloud, Tailscale, Wireguard, Terraform, Bitwarden Secrets Manager, Hashicorp Vault, Ansible, Docker, Filebeat, ELK Stack, Zabbix, GitHub Actions, Prometheus, Grafana, InfluxDB, BitBucket CI/CD.\n"
+    "title": "კარიერული პროფილი",
+    "summary": "გამოცდილება სხვადასხვა IT როლში, მათ შორის აპლიკაციების სიცოცხლის ციკლის ავტომატიზაციაში, აპლიკაციური სერვერების ადმინისტრირებაში, სისტემურ ადმინისტრირებასა და Desktop Support-ში, კრიტიკული IT ინფრასტრუქტურისა და სერვისების უწყვეტი მუშაობის უზრუნველყოფაზე ფოკუსით. კომპეტენტური აპლიკაციების პატჩირების პროცესების ოპტიმიზაციაში, IT ოპერაციების სტანდარტებსა და საუკეთესო პრაქტიკებთან შესაბამისობაში, სხვადასხვა ვებ-სერვისებისა და სისტემების პრობლემების დიაგნოსტიკასა და მართვაში, ასევე მაღალი ხელმისაწვდომობის მაჩვენებლების შენარჩუნებაში. გამოცდილი ვირტუალური მანქანების მხარდაჭერასა და მომსახურებაში, სერვერული ჰარდვერისა და ბექაპების მართვაში და დესკტოპ სისტემებისა და პერიფერიების ტექნიკურ მხარდაჭერაში. ორიენტირებული სტაბილური და საიმედო IT ოპერაციების უზრუნველყოფაზე ორგანიზაციულ სტანდარტებსა და სტრატეგიულ გეგმებთან შესაბამისობაში. გამოცდილება Cloudflare, Cloudflare Zero Trust, Hetzner, Akamai Cloud, Tailscale, Wireguard, Terraform, Bitwarden Secrets Manager, Hashicorp Vault, Ansible, Docker, Filebeat, ELK Stack, Zabbix, GitHub Actions, Prometheus, Grafana, InfluxDB და BitBucket CI/CD ტექნოლოგიებში."
   },
   "education": {
-    "title": "Education",
+    "title": "განათლება",
     "info": [
       {
         "degree": "LPIC-2",
         "university": "Linux Professional Institute",
         "time": "11/2023 - 02/2024",
-        "details": "LPID: LPI000523471\nVerification Code: pdycar254f\n"
+        "details": "LPID: LPI000523471\nვერიფიკაციის კოდი: pdycar254f\n"
       },
       {
         "degree": "LPIC-1",
         "university": "Linux Professional Institute",
         "time": "02/2022 - 04/2022",
-        "details": "LPID: LPI000523471\nVerification Code: 5lhcz7x9r5\n"
+        "details": "LPID: LPI000523471\nვერიფიკაციის კოდი: 5lhcz7x9r5\n"
       },
       {
-        "degree": "System administration and security course",
+        "degree": "სისტემური ადმინისტრირებისა და უსაფრთხოების კურსი",
         "university": "Scientific Cyber Security Association",
         "time": "11/2020 - 12/2020"
       },
       {
-        "degree": "BSc in Electrical & Computer Engineering",
-        "university": "Agricultural University of Tbilisi",
+        "degree": "ბაკალავრი ელექტრო და კომპიუტერულ ინჟინერიაში",
+        "university": "თბილისის აგრარული უნივერსიტეტი",
         "time": "2016 - 2021",
-        "details": "Me and two friends participated in the \"Edison League\" tournament (for 11th-12th grade students), where we solved STEM problems including: building a paper arch supporting the most weight, solving a gear puzzle, and building a rubber band-powered car driving the longest distance;\nWe each received a ₾10,000 grant to cover university fees;\nBuilt remote start system for Gen 2/3 Toyota Prius as a university project.\n"
+        "details": "მე და ჩემმა ორმა მეგობარმა მონაწილეობა მივიღეთ \"Edison League\"-ის ტურნირში (11-12 კლასის მოსწავლეებისთვის), სადაც ვხსნიდით STEM ამოცანებს, მათ შორის: ქაღალდის თაღის შექმნა, რომელიც მაქსიმალურ წონას უძლებდა; გียร์ების პაზლის ამოხსნა; და რეზინის ძაფზე მომუშავე მანქანის აწყობა, რომელიც მაქსიმალურ მანძილს გადიოდა;\nყველამ მივიღეთ ₾10,000 გრანტი უნივერსიტეტის საფასურის დასაფარად;\nუნივერსიტეტის პროექტის ფარგლებში შევქმენით დისტანციური დაქოქვის სისტემა Gen 2/3 Toyota Prius-ისთვის.\n"
       }
     ]
   },
   "experiences": {
-    "title": "Recent Experiences",
+    "title": "ბოლოდროინდელი გამოცდილება",
     "info": [
       {
-        "role": "System Engineer",
-        "time": "April 2025 - Present",
+        "role": "სისტემური ინჟინერი",
+        "time": "აპრილი 2025 - დღემდე",
         "company": "EPAM Systems",
-        "details": "- Work with GitHub Advanced Security (GHAS), Mend.io, and CodeQL for security scanning;\n- Focus on GCP cloud platform;\n- Quick response times and high-quality work as noted by requesters.\n"
+        "details": "- ვმუშაობ GitHub Advanced Security (GHAS), Mend.io და CodeQL უსაფრთხოების სკანირებისთვის;\n- ფოკუსი — GCP cloud პლატფორმაზე;\n- სწრაფი რეაგირება და მაღალი ხარისხის შესრულება როგორც მოთხოვნის დამკვეთების მიერ აღინიშნა.\n"
       },
       {
-        "role": "Application Server Administration",
-        "time": "July 2022 - March 2025",
-        "company": "JSC Liberty Bank",
-        "details": "- Overhauled build/deploy and rollback pipelines for all applications (frontend and backend), including new pipelines for applications without prior automation;\n- Implemented playbooks for rapid environment provisioning and application deployment in fast-paced environment;\n- Implemented RabbitMQ and IIS monitoring in Zabbix with specific metrics and alerts not available in general templates;\n- Troubleshoot and manage Jenkins/Nginx/IIS WebService/Windows Services/Linux Services;\n- Manage application patching procedures.\n"
+        "role": "აპლიკაციური სერვერების ადმინისტრირება",
+        "time": "ივლისი 2022 - მარტი 2025",
+        "company": "სს Liberty Bank",
+        "details": "- აპლიკაციების (frontend და backend) build/deploy და rollback pipeline-ების გადახედვა და გაუმჯობესება, მათ შორის ახალი pipeline-ების შექმნა აპლიკაციებისთვის, სადაც ავტომატიზაცია არ არსებობდა;\n- playbook-ების დანერგვა სწრაფ გარემოებში გარემოს პროვიზიონირებისა და აპლიკაციების გაშვებისათვის;\n- Zabbix-ში RabbitMQ და IIS მონიტორინგის დანერგვა სპეციფიკური მეტრიკებითა და ალერტებით, რომლებიც სტანდარტულ ტემპლეიტებში არ იყო;\n- Jenkins/Nginx/IIS WebService/Windows Services/Linux Services პრობლემების დიაგნოსტიკა და მართვა;\n- აპლიკაციების პატჩირების პროცედურების მართვა.\n"
       },
       {
-        "role": "Systems Administration",
-        "time": "April 2021 - July 2022",
-        "company": "HCOJ - High Council Of Justice Of Georgia",
-        "details": "- Provisioned Dev/Test/Pre/Prod environments for newly developed applications;\n- Support and maintain 170+ Virtual machines, both Windows and Linux;\n- Ensure that all server hardware, operating systems, software and procedures are aligned with organizational standards and strategic business plan;\n- Troubleshooting problems with virtual machines as well as hardware that runs hypervisors;\n- Manage vCenter and ESXI Hosts;\n- Manage VMware vCenter Backups using Veeam.\n"
-      },
-      {
-        "role": "Desktop Support",
-        "time": "April 2020 - March 2021",
-        "company": "HCOJ - High Council Of Justice Of Georgia",
-        "details": "- Desktop Support;\n- Proactively resolve IT related problems about equipment and services.\n"
+        "role": "სისტემური ადმინისტრირება",
+        "time": "აპრილი 2021 - ივლისი 2022",
+        "company": "HCOJ - საქართველოს უმაღლესი სასამართლო საბჭო",
+        "details": "- ახალი აპლიკაციებისთვის Dev/Test/Pre/Prod გარემოების პროვიზიონირება;\n- 170+ ვირტუალური მანქანის მხარდაჭერა და მართვა (Windows და Linux);\n- სერვერული ჰარდვერის, ოპერაციული სისტემების, პროგრამული უზრუნველყოფისა და პროცედურების შესაბამისობის უზრუნველყოფა ორგანიზაციულ სტანდარტებსა და სტრატეგიულ ბიზნეს-გეგმასთან;\n- ჰიპერვაიზერებზე გაშვებული ვირტუალური მანქანების და აპარატურის პრობლემების დიაგნოსტიკა;\n- vCenter და ESXi ჰოსტების მართვა;\n- VMware vCenter-ის ბექაპების მართვა Veeam-ის საშუალებით.\n"
       },
       {
         "role": "Desktop Support",
-        "time": "August 2019 - March 2020",
-        "company": "UGT - Technology Company",
-        "details": "- Responded to requests for technical assistance in person via phone and remotely for Windows and Mac OS based endpoints (Laptops & Desktops);\n- Provided support for desktop computer operating systems, Microsoft Apps, and hardware/peripherals;\n- Worked with individuals across the country.\n"
+        "time": "აპრილი 2020 - მარტი 2021",
+        "company": "HCOJ - საქართველოს უმაღლესი სასამართლო საბჭო",
+        "details": "- Desktop Support;\n- IT ინციდენტების პროაქტიული გადაწყვეტა, დაკავშირებული ტექნიკასა და სერვისებთან.\n"
+      },
+      {
+        "role": "Desktop Support",
+        "time": "აგვისტო 2019 - მარტი 2020",
+        "company": "UGT - ტექნოლოგიური კომპანია",
+        "details": "- მომხმარებლების მხარდაჭერა ადგილზე, ტელეფონით და დისტანციურად Windows და Mac OS მოწყობილობებისთვის (ლეპტოპები და დესკტოპები);\n- დესკტოპ ოპერაციული სისტემების, Microsoft აპებისა და ჰარდვერის/პერიფერიების მხარდაჭერა;\n- თანამშრომლობა მომხმარებლებთან ქვეყნის მასშტაბით.\n"
       },
       {
         "role": "Freelance IT Support",
         "time": "2017 - 2018",
         "company": "Freelance",
-        "details": "- Worked for multiple Pharma companies;\n- For Concept Pharma: network setup and maintenance, printer and PC troubleshooting, software installations/updates, staff training;\n- For other clients: networking wiring for new offices, planning and deploying networking gear and PCs for staff;\n- Implemented access lists for network segmentation, firewall rules, and regular firmware/software updates.\n"
+        "details": "- მუშაობა რამდენიმე ფარმაცევტულ კომპანიასთან;\n- Concept Pharma-სთვის: ქსელის აწყობა და მხარდაჭერა, პრინტერებისა და ПК-ების პრობლემების დიაგნოსტიკა, პროგრამული უზრუნველყოფის ინსტალაცია/განახლება, პერსონალის ტრენინგი;\n- სხვა კლიენტებისთვის: ახალი ოფისებისთვის ქსელური ინფრასტრუქტურის დაგეგმვა და მოწყობილობების განლაგება;\n- ქსელის სეგმენტაციისთვის access list-ების დანერგვა, firewall წესების გამართვა და რეგულარული firmware/software განახლებები.\n"
       },
       {
         "role": "Knick",
         "time": 2016,
         "company": "Knick (Smart NFC Ring Company)",
-        "details": "- In charge of manufacturing antenna coils for smart NFC rings;\n- Improved coil designs for better working range and more compact size;\n- Optimized coil geometry to improve signal strength and reduce interference;\n- Used in-house developed jig for speeding up reader-to-ring distance measurement;\n- Worked with natural wood materials and natural color ink;\n- Used CNC machines and laser cutters for physical coil components.\n"
+        "details": "- Smart NFC ბეჭდებისთვის ანტენების ხვეულების წარმოებაზე პასუხისმგებელი;\n- ხვეულების დიზაინის გაუმჯობესება უკეთესი დიაპაზონისა და უფრო კომპაქტური ზომისთვის;\n- ხვეულების გეომეტრიის ოპტიმიზაცია სიგნალის სიძლიერის გასაუმჯობესებლად და ჩარევის შესამცირებლად;\n- reader-to-ring მანძილის გაზომვის დასაჩქარებლად ინჰაუს ჯიგის გამოყენება;\n- ბუნებრივი ხის მასალებთან და ბუნებრივი ფერის მელნასთან მუშაობა;\n- ფიზიკური კომპონენტებისთვის CNC მანქანებისა და ლაზერული საჭრელების გამოყენება.\n"
       },
       {
         "role": "IT Service Center",
         "time": "2015 - 2016",
         "company": "ITSC",
-        "details": "- Worked after school hours and during summer;\n- Troubleshoot, build, and service computer systems and printers;\n- Used in-house developed website for logging troubleshooting/maintenance steps;\n- Used remote desktop tools (TeamViewer, Remote Desktop Connection) for remote assistance;\n- Common issues: network drivers, printers, software installations, password resets, account lockouts;\n- Aimed to resolve issues same day or within a few hours for complex problems.\n"
+        "details": "- მუშაობა სკოლის შემდეგ და ზაფხულში;\n- კომპიუტერული სისტემებისა და პრინტერების დიაგნოსტიკა, აწყობა და მომსახურება;\n- შიდა ვებსაიტის გამოყენება დიაგნოსტიკის/მომსახურების ნაბიჯების დასალოგად;\n- დისტანციური მხარდაჭერის ინსტრუმენტების გამოყენება (TeamViewer, Remote Desktop Connection);\n- ხშირი პრობლემები: ქსელის დრაივერები, პრინტერები, პროგრამების ინსტალაცია, პაროლების გადაყენება, ანგარიშების დაბლოკვა;\n- მიზანი: პრობლემების გადაწყვეტა იმავე დღეს ან რამდენიმე საათში რთული შემთხვევებისთვის.\n"
       },
       {
         "role": "Computer Development Center",
         "time": 2014,
         "company": "CDS",
-        "details": "- Worked after school hours and during summer break full time;\n- Troubleshoot, build, and service computer systems and printers;\n- Helped build and deploy 50+ computer systems for a Hospital;\n- Responsible for OS Deployment, configuration, and QC;\n- Used Acronis Clone for disk imaging and deployment;\n- Used PXE boot for faster deployment;\n- Configuration steps: language settings, timezone, network configuration, domain joining;\n- Baked drivers and software into images for easier post-deployment setup;\n- QC checks: driver verification, timezone/language/network checks, stress tests, temperature checks under load.\n"
+        "details": "- მუშაობა სკოლის შემდეგ და ზაფხულში სრულ განაკვეთზე;\n- კომპიუტერული სისტემებისა და პრინტერების დიაგნოსტიკა, აწყობა და მომსახურება;\n- საავადმყოფოსთვის 50+ კომპიუტერის აწყობა და განლაგება;\n- OS-ის განთავსება (deployment), კონფიგურაცია და QC;\n- დისკების იმიჯინგი Acronis Clone-ის გამოყენებით;\n- PXE boot-ის გამოყენება სწრაფი განთავსებისთვის;\n- კონფიგურაციის ნაბიჯები: ენის პარამეტრები, დროის სარტყელი, ქსელის კონფიგურაცია, დომენში გაწევრიანება;\n- დრაივერებისა და პროგრამების image-ში ჩაშენება უფრო მარტივი პოსტ-დაყენებისთვის;\n- QC შემოწმებები: დრაივერების ვალიდაცია, დროის სარტყელი/ენის/ქსელის შემოწმებები, სტრეს-ტესტები, ტემპერატურის შემოწმება დატვირთვაზე.\n"
       },
       {
         "role": "Intellect Center",
         "time": 2013,
         "company": "Intellect Center",
-        "details": "- Worked after school hours for 6 months;\n- Basic computer hardware and software troubleshooting and servicing;\n- Used hardware tools: PSU tester, POST card, multimeter;\n- Disassembled and reassembled computer components;\n- Used software tools: Hiren's BootCD, MemTest86, antivirus and malware removal tools;\n- Performed OS installations and updates;\n- Experience with Windows and Linux distributions;\n- Used simple network switches, routers, access points, and modems.\n"
+        "details": "- მუშაობა სკოლის შემდეგ 6 თვის განმავლობაში;\n- კომპიუტერული ჰარდვერისა და პროგრამული უზრუნველყოფის საბაზისო დიაგნოსტიკა და მომსახურება;\n- ჰარდვერის ინსტრუმენტების გამოყენება: PSU tester, POST card, multimeter;\n- კომპიუტერული კომპონენტების დაშლა და აწყობა;\n- პროგრამული ინსტრუმენტების გამოყენება: Hiren's BootCD, MemTest86, ანტივირუსი და malware removal ინსტრუმენტები;\n- OS-ის ინსტალაცია და განახლებები;\n- გამოცდილება Windows და Linux დისტრიბუციებთან;\n- მარტივი ქსელური სვიჩების, როუტერების, access point-ების და მოდემების გამოყენება.\n"
       }
     ]
   },
   "projects": {
-    "title": "Projects",
-    "intro": "Small list of projects that I enjoy working on in my free time\n",
+    "title": "პროექტები",
+    "intro": "პროექტების მოკლე სია, რომელზეც თავისუფალ დროს ვმუშაობ\n",
     "assignments": [
       {
         "title": "Secret Santa",
         "link": "https://github.com/slick-ge/secret-santa-backend",
-        "tagline": "Personal project to learn Golang. Backend built with Gin framework and GORM for database. Frontend by friend using React."
+        "tagline": "პირადი პროექტი Golang-ის სასწავლად. Backend: Gin framework და GORM ბაზისთვის. Frontend — მეგობრის მიერ React-ზე."
       },
       {
         "title": "Golang Tools",
         "link": "https://github.com/Ghvinerias/learning-golang",
-        "tagline": "Collection of tools: TCP port checker, HTTP load tester, web scraper, and MKV file converter using mkvmerge."
+        "tagline": "ინსტრუმენტების კოლექცია: TCP პორტების შემმოწმებელი, HTTP დატვირთვის ტესტერი, ვებ-სკრაპერი და MKV ფაილის კონვერტერი (mkvmerge)."
       },
       {
         "title": "HomeLAB",
         "link": "https://github.com/Ghvinerias/homelab",
-        "tagline": "Home lab with Proxmox, K8s, Docker, LXC, UniFi, OPNsense. Services: Jellyfin, Home Assistant, EMQX, Grafana, Prometheus, Zabbix, Loki, Infisical, Nginx, Ollama, RabbitMQ. Updates automated with Jenkins and Ansible."
+        "tagline": "Home lab: Proxmox, K8s, Docker, LXC, UniFi, OPNsense. სერვისები: Jellyfin, Home Assistant, EMQX, Grafana, Prometheus, Zabbix, Loki, Infisical, Nginx, Ollama, RabbitMQ. განახლებები ავტომატიზებულია Jenkins-ით და Ansible-ით."
       }
     ]
   },
-  "footer": "Thank you for your time :)\n"
+  "footer": "კოფეინით და კარგი განწყობით აწყობილი. არცერთი AI არ დაზიანებულა."
 }
