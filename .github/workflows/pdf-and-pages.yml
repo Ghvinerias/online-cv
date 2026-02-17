@@ -34,34 +34,43 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Generate PDF from print view
+      - name: Generate PDFs from print views
         run: |
           node - <<'NODE'
           const { chromium } = require('playwright');
           const path = require('path');
           const fs = require('fs');
-          const filePath = path.resolve('dist/print/index.html');
-          const outDir = path.resolve('src/assets/pdf');
-          const outFile = path.join(outDir, 'Aleksandre-Ghvineria-CV-EN.pdf');
 
-          if (!fs.existsSync(filePath)) {
-            console.error('print page not found:', filePath);
-            process.exit(1);
+          const outDir = path.resolve('src/assets/pdf');
+          const targets = [
+            { html: 'dist/print/index.html', out: 'Aleksandre-Ghvineria-CV-EN.pdf' },
+            { html: 'dist/ka/print/index.html', out: 'Aleksandre-Ghvineria-CV-KA.pdf' }
+          ];
+
+          for (const t of targets) {
+            const filePath = path.resolve(t.html);
+            if (!fs.existsSync(filePath)) {
+              console.error('print page not found:', filePath);
+              process.exit(1);
+            }
           }
           if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
           (async () => {
             const browser = await chromium.launch();
-            const page = await browser.newPage();
-            await page.goto('file://' + filePath, { waitUntil: 'networkidle' });
-            await page.pdf({
-              path: outFile,
-              format: 'A4',
-              printBackground: true,
-              margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
-            });
+            for (const t of targets) {
+              const page = await browser.newPage();
+              await page.goto('file://' + path.resolve(t.html), { waitUntil: 'networkidle' });
+              await page.pdf({
+                path: path.join(outDir, t.out),
+                format: 'A4',
+                printBackground: true,
+                margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+              });
+              await page.close();
+              console.log('PDF generated:', t.out);
+            }
             await browser.close();
-            console.log('PDF generated:', outFile);
           })().catch(err => {
             console.error(err);
             process.exit(1);

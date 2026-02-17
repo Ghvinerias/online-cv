@@ -1,25 +1,25 @@
 ---
 layout: base.njk
 pageClass: home
-lang: en
+lang: ka
 ---
-{% set resume = resume_en %}
-{% set d = resume %}
+{% set resume = resume_ka %}
+{% set langSwitchUrl = "/" %}
 
 <header class="hero">
   <div class="container hero-grid">
     <div class="hero-main">
-      <div class="eyebrow">{{ d.sidebar.tagline }}</div>
-      <h1 class="hero-title">{{ d.sidebar.name }}</h1>
-      <p class="hero-subtitle">{{ d["career-profile"].summary | striptags }}</p>
+      <div class="eyebrow">{{ resume.sidebar.tagline }}</div>
+      <h1 class="hero-title">{{ resume.sidebar.name }}</h1>
+      <p class="hero-subtitle">{{ resume["career-profile"].summary | striptags }}</p>
       <div class="hero-actions">
-        <a class="btn primary" href="{{ d.sidebar.pdf }}" target="_blank" rel="noopener">Download PDF</a>
-        <a class="btn ghost" href="/print">Print-friendly</a>
+        <a class="btn primary" href="{{ resume.sidebar.pdf }}" target="_blank" rel="noopener">PDF ჩამოტვირთვა</a>
+        <a class="btn ghost" href="/ka/print">პრინტის ვერსია</a>
       </div>
     </div>
     <div class="hero-card">
-      {% if d.sidebar.avatar %}
-      <img class="avatar" src="/assets/images/{{ d.sidebar.avatar }}" alt="{{ d.sidebar.name }}" />
+      {% if resume.sidebar.avatar %}
+      <img class="avatar" src="/assets/images/{{ resume.sidebar.avatar }}" alt="{{ resume.sidebar.name }}" />
       {% endif %}
       <div class="contact">
         {% include "sections/contact.njk" %}
@@ -27,8 +27,8 @@ lang: en
     </div>
   </div>
   <div class="lang-switch">
-    <span class="pill">EN</span>
-    <a class="pill link" href="/ka/">KA</a>
+    <a class="pill link" href="/">EN</a>
+    <span class="pill">KA</span>
   </div>
 </header>
 
@@ -47,5 +47,5 @@ lang: en
 </main>
 
 <footer class="container footer">
-  <span>{{ d.footer }}</span>
+  <span>{{ resume.footer }}</span>
 </footer>
