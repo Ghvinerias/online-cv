@@ -103,7 +103,14 @@ a { color: inherit; text-decoration: none; }
 .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .contact-list li { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); }
 .contact-list span { color: var(--text); font-weight: 600; }
-.contact-list a { color: var(--text); }
+.contact-list a {
+	color: var(--text);
+	text-decoration: underline;
+	text-underline-offset: 2;
+	::after{
+		content: '&nearr;';
+	}
+} 
 
 .main-grid {
   display: grid;
