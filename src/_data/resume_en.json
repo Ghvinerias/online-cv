@@ -124,7 +124,7 @@
           "level": "60%"
         },
         {
-          "name": "Wireguard",
+          "name": "WireGuard",
           "level": "60%"
         }
       ]
@@ -132,7 +132,7 @@
   },
   "career-profile": {
     "title": "Career Profile",
-    "summary": "Experienced in various IT roles, including Application lifecycle automation, Application Server Administration, Systems Administration, and Desktop Support,\nwith a focus on ensuring the smooth operation of critical IT infrastructure and services. Proficient\nin optimizing application patching processes, adhering to IT operations standards and best practices,\ntroubleshooting and managing various web services and systems, and maintaining high uptime percentages.\nSkilled in supporting and maintaining virtual machines, managing server hardware and backups, and providing\ntechnical assistance for desktop systems and peripherals.\nCommitted to delivering reliable and stable IT operations while aligning with organizational standards and strategic plans.\nI have varying experience in using Cloudflare, Cloudflare Zero Trust, Hetzner, Akamai Cloud, Tailscale, Wireguard, Terraform, Bitwarden Secrets Manager, Hashicorp Vault, Ansible, Docker, Filebeat, ELK Stack, Zabbix, GitHub Actions, Prometheus, Grafana, InfluxDB, BitBucket CI/CD.\n"
+    "summary": "Experienced in various IT roles, including Application lifecycle automation, Application Server Administration, Systems Administration, and Desktop Support,\nwith a focus on ensuring the smooth operation of critical IT infrastructure and services. Proficient\nin optimizing application patching processes, adhering to IT operations standards and best practices,\ntroubleshooting and managing various web services and systems, and maintaining high uptime percentages.\nSkilled in supporting and maintaining virtual machines, managing server hardware and backups, and providing\ntechnical assistance for desktop systems and peripherals.\nCommitted to delivering reliable and stable IT operations while aligning with organizational standards and strategic plans.\nI have varying experience in using Cloudflare, Cloudflare Zero Trust, Hetzner, Akamai Cloud, Tailscale, WireGuard, Terraform, Bitwarden Secrets Manager, HashiCorp Vault, Ansible, Docker, Filebeat, ELK Stack, Zabbix, GitHub Actions, Prometheus, Grafana, InfluxDB, Bitbucket CI/CD.\n"
   },
   "education": {
     "title": "Education",
@@ -181,19 +181,19 @@
         "role": "Systems Administration",
         "time": "April 2021 - July 2022",
         "company": "HCOJ - High Council Of Justice Of Georgia",
-        "details": "- Provisioned Dev/Test/Pre/Prod environments for newly developed applications;\n- Support and maintain 170+ Virtual machines, both Windows and Linux;\n- Ensure that all server hardware, operating systems, software and procedures are aligned with organizational standards and strategic business plan;\n- Troubleshooting problems with virtual machines as well as hardware that runs hypervisors;\n- Manage vCenter and ESXI Hosts;\n- Manage VMware vCenter Backups using Veeam.\n"
+        "details": "- Provisioned Dev/Test/Pre/Prod environments for newly developed applications;\n- Support and maintain 170+ Virtual machines, both Windows and Linux;\n- Ensure that all server hardware, operating systems, software and procedures are aligned with organizational standards and strategic business plan;\n- Troubleshooting problems with virtual machines as well as hardware that runs hypervisors;\n- Manage vCenter and ESXi Hosts;\n- Manage VMware vCenter Backups using Veeam.\n"
       },
       {
         "role": "Desktop Support",
         "time": "April 2020 - March 2021",
         "company": "HCOJ - High Council Of Justice Of Georgia",
-        "details": "- Desktop Support;\n- Proactively resolve IT related problems about equipment and services.\n"
+        "details": "- Desktop Support\n- Proactively resolve IT related problems about equipment and services.\n"
       },
       {
         "role": "Desktop Support",
         "time": "August 2019 - March 2020",
         "company": "UGT - Technology Company",
-        "details": "- Responded to requests for technical assistance in person via phone and remotely for Windows and Mac OS based endpoints (Laptops & Desktops);\n- Provided support for desktop computer operating systems, Microsoft Apps, and hardware/peripherals;\n- Worked with individuals across the country.\n"
+        "details": "- Responded to requests for technical assistance in person via phone and remotely for Windows and macOS based endpoints (Laptops & Desktops);\n- Provided support for desktop computer operating systems, Microsoft Apps, and hardware/peripherals;\n- Worked with individuals across the country.\n"
       },
       {
         "role": "Freelance IT Support",
