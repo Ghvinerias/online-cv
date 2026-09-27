@@ -1,0 +1,21 @@
+:root {
+  --surface: #e0e5ec;
+  --text: #3d4852;
+  /* Slightly deeper than the supplied muted/violet tokens for AA text contrast. */
+  --muted: #59616e;
+  --accent: #6c63ff;
+  --accent-strong: #574bd6;
+  --accent-light: #8b84ff;
+  --teal: #25837f;
+  --font-display: 'Plus Jakarta Sans Variable', sans-serif;
+  --font-body: 'DM Sans Variable', sans-serif;
+  --radius-card: 32px;
+  --radius-control: 16px;
+  --duration: 300ms ease-out;
+  --shadow-raised: 9px 9px 16px rgba(163,177,198,.6), -9px -9px 16px rgba(255,255,255,.5);
+  --shadow-hover: 12px 12px 20px rgba(163,177,198,.7), -12px -12px 20px rgba(255,255,255,.6);
+  --shadow-small: 5px 5px 10px rgba(163,177,198,.6), -5px -5px 10px rgba(255,255,255,.5);
+  --shadow-inset: inset 6px 6px 10px rgba(163,177,198,.6), inset -6px -6px 10px rgba(255,255,255,.5);
+  --shadow-inset-deep: inset 10px 10px 20px rgba(163,177,198,.7), inset -10px -10px 20px rgba(255,255,255,.6);
+  --shadow-inset-small: inset 3px 3px 6px rgba(163,177,198,.6), inset -3px -3px 6px rgba(255,255,255,.5);
+}

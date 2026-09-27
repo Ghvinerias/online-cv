@@ -1,6 +1,7 @@
-# online-cv (v2)
+# online-cv
 
-Modern, static CV site powered by **Eleventy** and a single YAML data file.
+Astro-based resume site for Aleksandre Ghvineria, using the slick.ge visual system.
+Content lives in `src/data/content.json` and is published at `/en/`.
 
 ## Quick start
 
@@ -19,14 +20,8 @@ npm run build
 
 Static output goes to `dist/`.
 
-## Data
+The GitHub Pages workflow also renders `/en/print/` with Playwright and adds a fresh English PDF to the deployed artifact.
 
-Edit `src/_data/data.yml` to update all content.
+## Configuration
 
-## Print/PDF
-
-Visit `/print` for the PDF-friendly version.
-
----
-
-Legacy Jekyll files were removed on the `eleventy-redesign` branch.
+English is the only published locale.
