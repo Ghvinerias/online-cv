@@ -1,0 +1,41 @@
+---
+import ResumeLayout from '../layouts/ResumeLayout.astro';
+import Icon from './Icon.astro';
+import content from '../data/content.json';
+import type { Locale } from '../data/resume';
+
+interface Props { locale: Locale; print?: boolean; }
+const { locale, print = false } = Astro.props;
+const d = content;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const bullets = (value = '') => value.split('\n').map(item => item.replace(/^-\s*/, '').trim()).filter(Boolean);
+const text = (value: string) => value;
+---
+<ResumeLayout locale={locale} print={print}>
+  <section class="container resume-hero" aria-labelledby="resume-title">
+    <div class="resume-hero-copy">
+      <p class="eyebrow">{d.sidebar.tagline}</p>
+      <h1 id="resume-title">{d.sidebar.name}</h1>
+      <p class="resume-lead">{d['career-profile'].summary}</p>
+      {!print && <div class="hero-actions"><a class="button button-primary" href={`${base}assets/pdf/Aleksandre-Ghvineria-CV-EN.pdf`} target="_blank" rel="noopener">{text('Download full CV')}</a><a class="text-link" href="https://slick.ge/en/#contact">{text('Talk about a project →')}</a></div>}
+    </div>
+    <aside class="resume-contact surface" aria-label={text('Contact details')}>
+      <img class="resume-avatar" src={`${base}assets/images/aleksandre-ghvineria.jpeg`} alt={d.sidebar.name} width="400" height="400" />
+      <a class="resume-contact-link" href={`mailto:${d.sidebar.email}`}><Icon name="mail" /> <span>{d.sidebar.email}</span></a>
+      <a class="resume-contact-link" href={`tel:${d.sidebar.phone.replaceAll(' ', '')}`}><Icon name="phone" /> <span>{d.sidebar.phone}</span></a>
+      <div class="resume-socials"><a href={`https://github.com/${d.sidebar.github}`} rel="noopener" aria-label="GitHub"><Icon name="github" /></a><a href={`https://linkedin.com/in/${d.sidebar.linkedin}`} rel="noopener" aria-label="LinkedIn"><Icon name="linkedin" /></a><a href={d.sidebar['lpi-url']} rel="noopener" aria-label="Linux Professional Institute"><Icon name="lpi" /></a></div>
+    </aside>
+  </section>
+  <div class="container resume-proof well"><span>{text('Selected scope')}</span><strong>170+ VMs</strong><i>·</i><strong>CI/CD</strong><i>·</i><strong>GHAS / CodeQL</strong><i>·</i><strong>Proxmox / Kubernetes</strong></div>
+  <main class="container resume-grid">
+    <section aria-labelledby="experience-title">
+      <div class="section-heading"><p class="eyebrow">{text('CAREER')}</p><h2 id="experience-title">{d.experiences.title}</h2></div>
+      <div class="experience-list">{d.experiences.info.map(exp => <article class="experience-card surface"><div class="experience-head"><div><h3>{exp.role}</h3><p>{exp.company}</p></div><time>{exp.time}</time></div><ul>{bullets(exp.details).map(item => <li>{item}</li>)}</ul></article>)}</div>
+    </section>
+    <aside class="resume-sidebar">
+      <section class="resume-section surface-small"><p class="eyebrow">{text('TOOLKIT')}</p><h2>{text('Tools I work with')}</h2><div class="resume-tool-list">{d.sidebar.skills.toolset.map(skill => <span class="well">{skill.name}</span>)}</div></section>
+      <section class="resume-section surface-small"><p class="eyebrow">{text('EDUCATION & CERTIFICATIONS')}</p><div class="resume-stack">{d.education.info.map(item => <article><h3>{item.degree}</h3><p>{item.university}</p><time>{item.time}</time></article>)}</div></section>
+      <section class="resume-section surface-small"><p class="eyebrow">{text('SELECTED WORK')}</p><div class="resume-stack">{d.projects.assignments.map(project => <article><h3>{project.title}</h3><p>{project.tagline}</p><a class="text-link" href={project.link} rel="noopener">{text('View project →')}</a></article>)}</div></section>
+    </aside>
+  </main>
+</ResumeLayout>
