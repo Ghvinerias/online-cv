@@ -3,6 +3,7 @@ import ResumeLayout from '../layouts/ResumeLayout.astro';
 import Icon from './Icon.astro';
 import content from '../data/content.json';
 import type { Locale } from '../data/resume';
+import { toolLogo } from '../data/tool-logos';
 
 interface Props { locale: Locale; print?: boolean; }
 const { locale, print = false } = Astro.props;
@@ -33,7 +34,7 @@ const text = (value: string) => value;
       <div class="experience-list">{d.experiences.info.map(exp => <article class="experience-card surface"><div class="experience-head"><div><h3>{exp.role}</h3><p>{exp.company}</p></div><time>{exp.time}</time></div><ul>{bullets(exp.details).map(item => <li>{item}</li>)}</ul></article>)}</div>
     </section>
     <aside class="resume-sidebar">
-      <section class="resume-section surface-small"><p class="eyebrow">{text('TOOLKIT')}</p><h2>{text('Tools I work with')}</h2><div class="resume-tool-list">{d.sidebar.skills.toolset.map(skill => <span class="well">{skill.name}</span>)}</div></section>
+      <section class="resume-section surface-small"><p class="eyebrow">{text('TOOLKIT')}</p><h2>{text('Tools I work with')}</h2><div class="resume-tool-list">{d.sidebar.skills.toolset.map(skill => <span class="well resume-tool"><img src={toolLogo(skill.name)} alt="" loading="lazy" width="20" height="20" /><span>{skill.name}</span></span>)}</div></section>
       <section class="resume-section surface-small"><p class="eyebrow">{text('EDUCATION & CERTIFICATIONS')}</p><div class="resume-stack">{d.education.info.map(item => <article><h3>{item.degree}</h3><p>{item.university}</p><time>{item.time}</time></article>)}</div></section>
       <section class="resume-section surface-small"><p class="eyebrow">{text('SELECTED WORK')}</p><div class="resume-stack">{d.projects.assignments.map(project => <article><h3>{project.title}</h3><p>{project.tagline}</p><a class="text-link" href={project.link} rel="noopener">{text('View project →')}</a></article>)}</div></section>
     </aside>

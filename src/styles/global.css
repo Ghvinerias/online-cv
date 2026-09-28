@@ -214,6 +214,8 @@ nav > a:hover { color: var(--accent-strong); }
 .resume-socials { display: flex; gap: 12px; margin-top: 8px; }
 .resume-socials a { min-height: 40px; display: grid; place-items: center; padding: 8px 12px; border-radius: 12px; box-shadow: var(--shadow-inset-small); font-size: .72rem; }
 .resume-socials svg { display: block; }
+.resume-tool { display: inline-flex; align-items: center; gap: 9px; }
+.resume-tool img { width: 20px; height: 20px; object-fit: contain; }
 .resume-proof { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px 18px; padding: 22px; font-size: .72rem; }
 .resume-proof span { color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: .58rem; }
 .resume-proof i { color: var(--teal); font-style: normal; }
