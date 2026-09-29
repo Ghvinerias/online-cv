@@ -20,7 +20,7 @@ npm run build
 
 Static output goes to `dist/`.
 
-The GitHub Pages workflow also renders `/en/print/` with Playwright and adds a fresh English PDF to the deployed artifact.
+The GitHub Pages workflow renders the plain `/print/` resume with Playwright and adds a fresh English PDF to the deployed artifact. `/en/print/` remains available as a compatibility alias.
 
 ## Configuration
 

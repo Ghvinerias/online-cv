@@ -51,10 +51,11 @@ jobs:
           ];
           fs.mkdirSync('dist/assets/pdf', { recursive: true });
 
-          for (const [locale, filename] of jobs) {
+          for (const [, filename] of jobs) {
             const page = await browser.newPage();
             await page.emulateMedia({ media: 'print' });
-            await page.goto(`http://127.0.0.1:4173/${locale}/print/`, { waitUntil: 'networkidle' });
+            await page.goto(`http://127.0.0.1:4173/print/`, { waitUntil: 'networkidle' });
+            await page.evaluate(() => document.fonts.ready);
             await page.pdf({
               path: `dist/assets/pdf/${filename}`,
               format: 'A4',

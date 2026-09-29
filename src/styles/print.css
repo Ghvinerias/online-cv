@@ -1,0 +1,56 @@
+@page {
+  size: A4;
+  margin: 13mm 14mm 14mm;
+}
+
+:root {
+  color: #20252b;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.38;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #20252b; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.15; }
+
+.print-resume { max-width: 182mm; margin: 0 auto; }
+.print-header { display: flex; justify-content: space-between; gap: 18mm; padding-bottom: 6mm; border-bottom: 1.5px solid #20252b; }
+.print-header h1 { font-size: 25pt; letter-spacing: -.04em; }
+.print-role { margin-top: 2mm; color: #4d5863; font-size: 11pt; }
+.print-header address { display: grid; align-content: start; gap: 1mm; font-style: normal; text-align: right; font-size: 8.5pt; }
+.print-header a:hover, .print-project-list a:hover { text-decoration: underline; }
+
+.print-section { margin-top: 5mm; }
+.print-section > h2 { padding-bottom: 1.5mm; border-bottom: 1px solid #aeb5bb; color: #20252b; font-size: 11pt; letter-spacing: .08em; text-transform: uppercase; }
+.print-summary p { margin-top: 2.5mm; }
+.print-experience-list { display: grid; gap: 4mm; margin-top: 3mm; }
+.print-experience { break-inside: avoid; }
+.print-experience-heading { display: flex; justify-content: space-between; gap: 8mm; }
+.print-experience h3, .print-compact-list h3, .print-project-list h3 { font-size: 10pt; }
+.print-experience-heading p { display: inline; color: #4d5863; }
+.print-experience-heading p::before { content: ' — '; color: #20252b; }
+.print-experience time { flex: 0 0 auto; color: #4d5863; font-size: 8.5pt; text-align: right; }
+.print-experience ul { margin: 1.5mm 0 0 4mm; padding-left: 4mm; }
+.print-experience li { padding-left: 1mm; }
+.print-experience li + li { margin-top: .7mm; }
+
+.print-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; break-inside: avoid; }
+.print-skill-list { margin-top: 2.5mm; }
+.print-compact-list, .print-project-list { display: grid; gap: 2.5mm; margin-top: 2.5mm; }
+.print-compact-list p, .print-project-list p { color: #4d5863; }
+.print-compact-list span { white-space: nowrap; }
+.print-project-list { grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+.print-project-list article { break-inside: avoid; }
+.print-project-list p { margin-top: 1mm; }
+.print-project-list a { display: block; margin-top: 1mm; overflow-wrap: anywhere; color: #4d5863; font-size: 8pt; }
+
+@media (max-width: 700px) {
+  .print-resume { padding: 24px 20px; }
+  .print-header, .print-bottom-grid { display: block; }
+  .print-header address { margin-top: 16px; text-align: left; }
+  .print-project-list { grid-template-columns: 1fr; }
+}
