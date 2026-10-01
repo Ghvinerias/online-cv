@@ -11,7 +11,7 @@ const data = content;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const title = `${data.sidebar.name} — Resume`;
 const description = data['career-profile'].summary.replace(/\s+/g, ' ').trim();
-const canonical = new URL(`${base}en/`, Astro.site);
+const canonical = new URL(base, Astro.site);
 ---
 <!doctype html>
 <html lang="en">

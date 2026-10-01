@@ -1,4 +1,4 @@
 ---
-import ResumePage from '../../components/ResumePage.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+return Astro.redirect(base, 301);
 ---
-<ResumePage locale="en" />

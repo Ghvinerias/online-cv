@@ -1,7 +1,7 @@
 # online-cv
 
 Astro-based resume site for Aleksandre Ghvineria, using the slick.ge visual system.
-Content lives in `src/data/content.json` and is published at `/en/`.
+Content lives in `src/data/content.json` and is published at `/`.
 
 ## Quick start
 
