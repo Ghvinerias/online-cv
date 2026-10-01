@@ -1,0 +1,87 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate resume PDFs
+        run: |
+          python3 -m http.server 4173 --directory dist >/tmp/online-cv-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          node --input-type=module <<'NODE'
+          import { chromium } from '@playwright/test';
+          import fs from 'node:fs';
+
+          const browser = await chromium.launch();
+          const jobs = [
+            ['en', 'Aleksandre-Ghvineria-CV-EN.pdf']
+          ];
+          fs.mkdirSync('dist/assets/pdf', { recursive: true });
+
+          for (const [, filename] of jobs) {
+            const page = await browser.newPage();
+            await page.emulateMedia({ media: 'print' });
+            await page.goto(`http://127.0.0.1:4173/print/`, { waitUntil: 'networkidle' });
+            await page.evaluate(() => document.fonts.ready);
+            await page.pdf({
+              path: `dist/assets/pdf/${filename}`,
+              format: 'A4',
+              printBackground: true,
+              preferCSSPageSize: true,
+              margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+            });
+            await page.close();
+            console.log(`Generated ${filename}`);
+          }
+
+          await browser.close();
+          NODE
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

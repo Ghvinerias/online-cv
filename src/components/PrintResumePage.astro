@@ -1,0 +1,67 @@
+---
+import PrintLayout from '../layouts/PrintLayout.astro';
+import content from '../data/content.json';
+import '../styles/print.css';
+
+const d = content;
+const bullets = (value = '') => value.split('\n').map(item => item.replace(/^[-•]\s*/, '').trim()).filter(Boolean);
+const clean = (value = '') => value.replace(/\s+/g, ' ').trim();
+const skills = d.sidebar.skills.toolset.map(skill => skill.name);
+---
+<PrintLayout>
+  <main class="print-resume">
+    <header class="print-header">
+      <div>
+        <h1>{d.sidebar.name}</h1>
+        <p class="print-role">{d.sidebar.tagline}</p>
+      </div>
+      <address>
+        <a href={`mailto:${d.sidebar.email}`}>{d.sidebar.email}</a>
+        <a href={`tel:${d.sidebar.phone.replaceAll(' ', '')}`}>{d.sidebar.phone}</a>
+        <a href={`https://github.com/${d.sidebar.github}`}>github.com/{d.sidebar.github}</a>
+        <a href={`https://linkedin.com/in/${d.sidebar.linkedin}`}>linkedin.com/in/{d.sidebar.linkedin}</a>
+      </address>
+    </header>
+
+    <section class="print-section print-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Profile</h2>
+      <p>{clean(d['career-profile'].summary)}</p>
+    </section>
+
+    <section class="print-section" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <div class="print-experience-list">
+        {d.experiences.info.map(exp => (
+          <article class="print-experience">
+            <div class="print-experience-heading">
+              <div><h3>{exp.role}</h3><p>{exp.company}</p></div>
+              <time>{exp.time}</time>
+            </div>
+            <ul>{bullets(exp.details).map(item => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <div class="print-bottom-grid">
+      <section class="print-section" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <p class="print-skill-list">{skills.join(' · ')}</p>
+      </section>
+
+      <section class="print-section" aria-labelledby="education-title">
+        <h2 id="education-title">Education & certifications</h2>
+        <div class="print-compact-list">
+          {d.education.info.map(item => <article><h3>{item.degree}</h3><p>{item.university} <span>· {item.time}</span></p></article>)}
+        </div>
+      </section>
+    </div>
+
+    <section class="print-section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected projects</h2>
+      <div class="print-project-list">
+        {d.projects.assignments.map(project => <article><h3>{project.title}</h3><p>{project.tagline}</p><a href={project.link}>{project.link}</a></article>)}
+      </div>
+    </section>
+  </main>
+</PrintLayout>

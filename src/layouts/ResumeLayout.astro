@@ -1,0 +1,34 @@
+---
+import '../styles/tokens.css';
+import '../styles/fonts.css';
+import '../styles/global.css';
+import content from '../data/content.json';
+import type { Locale } from '../data/resume';
+
+interface Props { locale?: Locale; print?: boolean; }
+const { print = false } = Astro.props;
+const data = content;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const title = `${data.sidebar.name} — Resume`;
+const description = data['career-profile'].summary.replace(/\s+/g, ' ').trim();
+const canonical = new URL(`${base}en/`, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#E0E5EC" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+  </head>
+  <body class={print ? 'print-page' : undefined}>
+    <a class="skip-link button" href="#main">Skip to content</a>
+    {!print && <header class="site-header"><div class="container header-inner"><div class="brand-lockup"><a class="wordmark" href="https://slick.ge/en/" aria-label="Slick — Make complexity simple">slick<span>.</span></a><p class="wordmark-subtitle">Detailed professional record.</p></div></div></header>}
+    <main id="main"><slot /></main>
+    {!print && <footer class="container site-footer"><a class="wordmark" href="https://slick.ge/en/">slick<span>.</span></a><p>The detailed professional record behind Slick.</p><a class="text-link" href="https://slick.ge/en/">Visit slick.ge →</a></footer>}
+  </body>
+</html>

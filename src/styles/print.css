@@ -1,0 +1,66 @@
+@import './fonts.css';
+@import './tokens.css';
+
+@page {
+  size: A4;
+  margin: 13mm 14mm 14mm;
+}
+
+:root {
+  color: var(--text);
+  background: #fff;
+  font-family: 'DM Sans Variable', Arial, Helvetica, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.38;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--text); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: 'Plus Jakarta Sans Variable', Arial, Helvetica, sans-serif; line-height: 1.15; letter-spacing: -.045em; }
+
+.print-resume { max-width: 182mm; margin: 0 auto; }
+.print-header { display: flex; justify-content: space-between; gap: 18mm; padding-bottom: 6mm; border-bottom: 1.5px solid var(--text); }
+.print-header > div, .print-experience-heading > div { min-width: 0; }
+.print-header h1 { font-size: 25pt; font-weight: 800; overflow-wrap: anywhere; }
+.print-role { margin-top: 2mm; color: var(--muted); font-size: 11pt; }
+.print-header address { display: grid; min-width: 0; align-content: start; gap: 1mm; font-style: normal; text-align: right; font-size: 8.5pt; }
+.print-header address a { overflow-wrap: anywhere; }
+.print-header a:hover, .print-project-list a:hover { text-decoration: underline; }
+
+.print-section { margin-top: 5mm; }
+.print-section > h2 { padding-bottom: 1.5mm; border-bottom: 1px solid rgba(61,72,82,.35); color: var(--text); font-size: 11pt; letter-spacing: .08em; text-transform: uppercase; }
+.print-summary p { margin-top: 2.5mm; }
+.print-experience-list { display: grid; gap: 4mm; margin-top: 3mm; }
+.print-experience { break-inside: avoid; page-break-inside: avoid; }
+.print-experience-heading { display: flex; justify-content: space-between; gap: 8mm; }
+.print-experience h3, .print-compact-list h3, .print-project-list h3 { font-size: 10pt; font-weight: 700; overflow-wrap: anywhere; }
+.print-experience-heading p { display: inline; color: var(--muted); }
+.print-experience-heading p::before { content: ' — '; color: var(--text); }
+.print-experience time { flex: 0 1 42mm; color: var(--accent-strong); font-size: 8.5pt; font-weight: 700; text-align: right; overflow-wrap: anywhere; }
+.print-experience ul { margin: 1.5mm 0 0 4mm; padding-left: 4mm; }
+.print-experience li { padding-left: 1mm; overflow-wrap: anywhere; }
+.print-experience li + li { margin-top: .9mm; }
+
+.print-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; break-inside: avoid; page-break-inside: avoid; }
+.print-skill-list { margin-top: 2.5mm; }
+.print-compact-list, .print-project-list { display: grid; gap: 2.5mm; margin-top: 2.5mm; }
+.print-compact-list p, .print-project-list p { color: var(--muted); }
+.print-compact-list span { white-space: nowrap; }
+.print-project-list { grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+.print-project-list article { min-width: 0; break-inside: avoid; page-break-inside: avoid; }
+.print-project-list p { margin-top: 1mm; }
+.print-project-list a { display: block; margin-top: 1mm; overflow-wrap: anywhere; color: var(--muted); font-size: 8pt; }
+
+@media print {
+  :root, body { background: #fff !important; }
+  * { box-shadow: none !important; text-shadow: none !important; }
+}
+
+@media (max-width: 700px) {
+  .print-resume { padding: 24px 20px; }
+  .print-header, .print-bottom-grid { display: block; }
+  .print-header address { margin-top: 16px; text-align: left; }
+  .print-project-list { grid-template-columns: 1fr; }
+}
